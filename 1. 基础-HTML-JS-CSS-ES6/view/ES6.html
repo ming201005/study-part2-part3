@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ES6语法和新特性</title>
+</head>
+<body>
+
+</body>
+<script>
+
+    console.log("1、变量定义====================");
+
+    //es6之前有两个作用域：全局作用域、函数作用域
+    //es6新增加了块作用域，也就是{}包起来的代码
+    //变量未声明不能引用
+    //不能重复声明
+    //定义常量，常量不能修改！也是有块作用域的！并且，声明的时候必须赋值
+    let num = 10;
+    let str = "张三";
+    const CFG_SET = ["A","B","C"];
+
+
+    console.log("2、变量赋值====================");
+
+    /*
+     解构赋值的分类：
+     1、数组结构赋值（左右都是数组）
+     2、对象结构赋值（左右都是对象）
+     3、字符串结构赋值（左数组、右字符串）
+     4、布尔值结构赋值
+     5、函数参数解构赋值（数组解构赋值在函数上的引用）
+     6、数值解构赋值
+     */
+    {
+        console.log("1、数组结构赋值（左右都是数组）===========");
+        let a,b,c;
+        let str;
+        //同时对a、b赋值
+        [a, b]=[15,20];
+        console.log("a=",a);
+        console.log("b=",b);
+        //同时对a、str、c赋值
+        [a,str,c] = ["AAA","中国人","C罗"];
+
+        console.log("a=",a);
+        console.log("str=",str);
+        console.log("c=",c);
+    }
+
+    {
+        console.log("2、数组结构赋值（左右都是数组）===========");
+        let a,b;
+        let str;
+        [a, b]=[15.8, "印刷技术"];
+        console.log(a, b);
+
+        //感觉太花哨了
+        [a,...str]=[5,"A","B","C","D"];
+        console.log(a,str);
+    }
+
+    {
+        let a,b;
+        //更花哨
+        ({a, b}={a:100,b:200});
+        console.log(a, b);
+    }
+
+    {
+        let a,b,c;
+        //太随意了，左边部分赋值。
+        [a, b,c = 999]=[666,888];
+
+         [a,b,c] = "ABC";
+
+        console.log(a, b, c);
+    }
+
+    {
+        function myFun() {
+            let a,b;
+            [a,b] = [5,6];
+            return [a,b];
+        }
+        let result1,result2;
+        [result1,result2] = myFun();
+        console.log("result1=",result1,"result2=",result2);
+    }
+
+    {
+        function f1() {
+            return [1,2,3,4,5];
+        }
+        let a,b,c;
+        [a, , ,b]=f1();
+        console.log(a, b);//1 4
+    }
+    {
+        function f1() {
+            return [1,2,3,4,5];
+        }
+        let a,b,c;
+        [a,...b]=f1();
+        console.log(a, b);//1 [2,3,4,5]
+    }
+
+    {
+        let {id,name} = {id:'01',name:'张三'};
+
+        console.log(id,name);
+
+    }
+
+    console.log("对象解构");
+
+    {
+        //对象解构
+        //
+        let {id,name,age,sex,addr} = user = {};
+        //将来赋值
+        user.id = '01';
+        user.name = '张三';
+        console.log(user);
+
+    }
+
+    console.log("3、数据扩展====================");
+    {
+        //247 0b二进制（大小写均可）
+        console.log(0b11110111);
+        //4681 0o八进制（大小写均可）
+        console.log(0o11111);
+
+        console.log('15',Number.isFinite(15));        //true
+        console.log('NaN',Number.isFinite(NaN));      //false
+        console.log('1/0',Number.isFinite(1/0));      //false
+        console.log('NaN',Number.isNaN(NaN));         //true
+        console.log('0',Number.isNaN(0));             //false
+
+        console.log('25',Number.isInteger(25));       //true
+        // 25.0=25
+        console.log('25.0',Number.isInteger(25.0));   //true
+        console.log('25.1',Number.isInteger(25.1));   //false
+        console.log('25.0',Number.isInteger('25.0')); //false
+
+        console.log(Number.MAX_SAFE_INTEGER);
+        console.log(Number.MIN_SAFE_INTEGER);
+        //是否位于上面两个数的范围内
+        console.log(Number.isSafeInteger(10));        //true
+        console.log(Number.isSafeInteger('a'));       //false
+
+        //es5：Math.floor，Math.ceil
+        console.log(4.1,Math.trunc(4.1));             //4
+        console.log(4.9,Math.trunc(4.9));             //4
+
+        console.log('-5',Math.sign(-5));              //-1
+        console.log('5',Math.sign(5));                //1
+        console.log('0',Math.sign(0));                //0
+        console.log('a',Math.sign('a'));              //NaN
+
+        //开立方根
+        console.log(Math.cbrt(-1));                   //-1
+        console.log(Math.cbrt(8));                    //2
+    }
+
+
+    console.log("4、数组扩展====================");
+
+    {
+
+        //of
+        let arr = Array.of(3, 4, 7, 9, 11);
+        console.log('arr==》', arr);//[3,4,7,9,11]
+        console.log('arr==》', Array.of());//返回[]
+
+        //from
+        console.log(Array.from('foo'));
+        // expected output: Array ["f", "o", "o"]
+
+        Array.from(["苹果", "香蕉", "梨"], item => {
+            console.log(item);
+        });
+
+        //合并两个数组 concat
+        const array1 = ['a', 'b', 'c'];
+        const array2 = ['d', 'e', 'f'];
+
+        console.log(array1.concat(array2));
+        // expected output: Array ["a", "b", "c", "d", "e", "f"]
+
+
+        //查找find
+        const array = [5, 12, 8, 130, 44];
+
+        const found = array.find(element => element == 8);
+
+        console.log(found);
+
+        //找到某个数
+        var findItem = array.indexOf(130);
+        //删除数据 splice
+        var removedItem = array.splice(findItem, 1);
+        console.log(removedItem,array);
+    }
+
+    console.log("5、函数扩展====================");
+
+    {
+        //给参数默认值
+        function test(x, y='world') {
+            console.log('默认值',x, y);
+        }
+        test();//undefined world
+
+
+
+        let x = 'test';
+        function test2(x,y=x) {
+            console.log('作用域',x,y)
+        }
+        test2('ABC');//ABC ABC
+        console.log('函数外x=',x)//test
+
+
+        //剩余参数（java中叫可变参数）
+        //将输入的参数都转为数组
+        function test3(...arg) {
+            for (let v of arg) {
+                //a b c
+                console.log('rest',v);
+            }
+        }
+        test3('a','b','c');
+
+
+        //将数组转成离散的值
+        console.log(...[1,2,4]);//1 2 4
+        console.log('a',...[1,2,4]);//a 1 2 4
+
+        //箭头函数
+        //v是参数，v+2是返回值
+        let arrow = v => v+2;
+        console.log('arrow=',arrow(3));//5
+
+        //无参数情况下
+        let arrow2 = ()=> 2;
+        console.log('arrow2=',arrow2);
+
+
+        //闭包函数
+        function myFun(x) {
+            let y=20;
+            return function AB() {
+               return (x+y);
+            }
+        }
+        //注意两个函数后还有 ()
+
+        console.log(myFun(100)()); //  120
+
+        //以上调用也可以这样写 :
+        //  let rs = myFun(100);
+        //  rs();
+        let rs = myFun(200);
+        let y = rs();
+        console.log(y); //220
+    }
+
+
+    console.log("6、对象扩展====================");
+
+    {
+
+        //1、对象定义
+        let id,name,sex;
+        [id,name,sex] = [1,'张三','男'];
+        //定义对象
+        let obj = {
+            id,
+            name,
+            sex,
+            //定义方法不像以前display : function()
+            display(){
+                console.log(id,name,sex);
+            }
+        }
+
+        obj.display();
+
+
+        //2、对象比较 同等于 ===
+        let str1 = "中国人";
+        let str2 = "中国人";
+        let eq = Object.is(str1,str2);
+        console.log("eq=",eq);
+
+        //3、赋值某个对象到目标对象
+        const target = { a: 1, b: 2 };
+        const source = { b: 4, c: 5 };
+
+        const returnedTarget = Object.assign(target, source);
+
+        console.log(target);
+        // expected output: Object { a: 1, b: 4, c: 5 }
+
+        console.log(returnedTarget);
+        // expected output: Object { a: 1, b: 4, c: 5 }
+
+        //4、对象遍历
+        const object1 = {
+            a: 'some string',
+            b: 42
+        };
+
+        for (let [key, value] of Object.entries(object1)) {
+            console.log(`${key}: ${value}`);
+        }
+    }
+
+    console.log("7、set map====================");
+
+    {
+        //(1)set ==============================
+        //1、新增数据
+        //没有重复值
+        let set = new Set();
+        //add添加值
+        set.add(7);
+        set.add(8);
+        set.add(9);
+        set.add(9); //不能重复
+        console.log('set size=',set.size);//3
+
+        let arr = [1,2,3,4,5,3]; //注意有重复
+        //数组添加值
+        let set1 = new Set(arr);
+        //注意打印的结果，set自动去重
+        //简单循环set
+        set1.forEach(item=>{
+            console.log(item);
+        });
+
+        //2、查找数据
+        console.log(set1.has(5));//true
+
+        //3、删除
+        console.log('delete==》',set1.delete(5),set1);
+
+        //4、清除数据
+        set1.clear();
+        console.log(set1);//set(0)
+
+
+        //5、遍历set，取得key、value
+        for (let [key,value] of set1.entries()){
+            console.log(key,value)
+        }
+
+        console.log('SET 完毕。。。');
+
+
+        //(2) map 和数组结合 ==============================
+
+        let list = new Array();
+        //map
+        let map1 = new Map();
+        map1.set("id",1);
+        map1.set("name","张三");
+        map1.set("sex","男");
+
+        list.push(map1);
+
+        let map2 = new Map([['id',2],['name','小兰'],['sex','女']]);
+        list.push(map2);
+
+        list.forEach(item=>{
+
+            console.log(item.get("id"),item.get("name"),item.get("sex"));
+        });
+
+        console.log('map Array 完毕。。。');
+
+
+        //(3) map 和set ==============================
+
+        let setList = new Set();
+        //map
+        let map3 = new Map();
+        map3.set("id",1);
+        map3.set("name","诸葛亮");
+        map3.set("sex","男");
+
+        let map4 = new Map();
+        map4.set("id",2);
+        map4.set("name","周瑜");
+        map4.set("sex","男");
+
+        let map5 = new Map();
+        map5.set("id",3);
+        map5.set("name","小乔");
+        map5.set("sex","女");
+
+        //把三个map加入set
+        setList.add(map3);
+        setList.add(map4);
+        setList.add(map5);
+        //遍历
+        for (let item of setList){
+            console.log(item.get("id"),item.get("name"),item.get("sex"));
+        }
+
+        console.log('map SET 完毕。。。');
+    }
+
+
+
+</script>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>组件内属性、方法定义</title>
+    <script src="../js/vue.js"></script>
+    <script src="../js/DateUtil.js"></script>
+    <style>
+        .contentBox {
+            width: 80%;
+            margin: 5px;
+            padding: 5px;
+            border: 1px #D8E1FF;
+            border-radius: 5px;
+            box-shadow: 2px 2px 2px 2px #BABABA;
+        }
+        .title{
+            line-height: 20px;
+            margin: 10px 5px;
+            padding: 5px;
+            color: #000;
+            font-size: 20px;
+            font-weight: bold;
+            background-color: azure;
+        }
+        .content{
+            padding: 5px;
+        }
+        .content >li{
+            list-style: none;
+            margin: 5px 0 0 0;
+            border-bottom-color: #BABABA;
+            border-width: 0 0 1px 0;
+            border-style: dotted;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <!--引用组件1-->
+    <component1></component1>
+</div>
+
+<!--==================模板 start=======================-->
+<!--组件1的模板-->
+<template id="t1">
+    <div class="contentBox">
+        <div class="title">{{articleObject.title}}</div>
+        <div class="content">
+            <li v-for="item in articleObject.contents">
+                [{{item.time | DateFormat}}] <a :href="'?id='+item.id">{{item.text}}</a>
+            </li>
+            <span v-html="articleCount"></span>
+        </div>
+    </div>
+</template>
+<!--==================模板 end  =======================-->
+
+<script>
+    Vue.component("Component1", {
+        template: `#t1`,
+        //数据定义,必须是一个方法
+        data(){
+            //必须是返回对象，对象内定义变量
+            return {
+                articleObject : {
+                    title:"",
+                    contents:[]
+                }
+            }
+        },
+        //初始化
+        created() {
+            //获取数据
+            this.getArticle();
+        },
+        //方法定义
+        methods:{
+            /**
+             * 假设是去服务器取数据
+             */
+            getArticle() {
+                //这里是模拟的数据
+                this.articleObject = {
+                    title: "牢记使命，不忘初心文章主题",
+                    contents: [
+                        {
+                            id: '1',
+                            time: '2019-05-11 01:12:32',
+                            text: '俄罗斯总统普京欢迎习近平主席的到来，畅谈国家大事'
+                        },
+                        {
+                            id: '2',
+                            time: '2019-08-15 01:12:32',
+                            text: '海军演示大事记，在海南举行'
+                        },
+                        {
+                            id: '3',
+                            time: '2018-09-25 01:12:32',
+                            text: 'NBA常规赛10佳进球最佳之一：玫瑰罗斯，高难度cross'
+                        }
+                    ]
+                };
+            }
+        },
+        //计算属性
+        computed:{
+            //统计文章总数
+            articleCount() {
+                let cts = this.articleObject.contents;
+                //返回统计结果
+                return `共有文章(<font color="#ff7f50">${cts.length}</font>)篇`;
+            }
+        }
+    });
+
+    //时间格式化过滤器
+    Vue.filter("DateFormat",value => {
+        let date = new Date(value);
+        return date.format("yyyy-MM-dd");
+    });
+    new Vue({
+        el: '#app',
+    });
+</script>
+</body>
+</html>
+
+
+

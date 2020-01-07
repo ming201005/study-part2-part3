@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>列表渲染v-for遍历对象</title>
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <!--没有 is属性-->
+    <ul>
+        <MyLi v-for="item in list">{{item}}</MyLi>
+    </ul>
+    <!--设置is属性-->
+    <hr>
+    <ul>
+        <li is="MyLi" v-for="item in list">{{item}}</li>
+    </ul>
+
+</div>
+<script>
+     //定义一个组件，注册为全局组件
+     Vue.component("MyLi",{
+         template:`<li>动物名：<slot></slot></li>`
+     });
+
+    let vue = new Vue({
+        el: "#app",
+        data: {
+            list:["猴子","小猫","小狗"]
+        }
+    });
+</script>
+</body>
+</html>

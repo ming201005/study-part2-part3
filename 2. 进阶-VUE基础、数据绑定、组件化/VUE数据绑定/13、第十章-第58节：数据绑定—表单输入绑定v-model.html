@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单输入绑定v-model</title>
+    <script src="../js/vue.js"></script>
+</head>
+<style>
+    #app{
+        width: 500px;
+        background-color: #D8E1FF;
+        padding: 10px;
+        border-radius: 4px;
+    }
+    #app >from>div {
+        margin: 10px 0px;
+    }
+</style>
+<body>
+<div id="app">
+    <from>
+        <!--<div>-->
+        <!--<label for="userName">用户名称：</label>-->
+        <!--<input v-model="userName" id="userName">-->
+        <!--</div>-->
+        <!--<input v-model.number="age" type="number">-->
+        <!--<input v-model.trim="msg">-->
+        <div>
+            <div>{{userName}}</div>
+            <label for="userName">用户名称：</label>
+            <input v-model.lazy="userName" id="userName">
+        </div>
+        <div>
+            <label for="message">备注信息：</label>
+            <textarea v-model="message" id="message"
+                      placeholder="这里可以输入很多信息">
+            </textarea>
+        </div>
+
+        <div>
+            <label>选择喜欢吃的水果：</label>
+            <input type="checkbox" v-model="fruits"
+                   id="apple" value="苹果">
+            <label for="apple">苹果</label>
+
+            <input type="checkbox" v-model="fruits"
+                   id="banana" value="香蕉">
+            <label for="banana">香蕉</label>
+
+            <input type="checkbox" v-model="fruits"
+                   id="pear" value="梨子">
+            <label for="pear">梨子</label>
+        </div>
+        <div>
+            <label>选择喜欢的球类：</label>
+            <input type="radio" v-model="balls" id="footBall" value="足球">
+            <label for="footBall">足球</label>
+
+            <input type="radio" v-model="balls" id="basketBall" value="篮球">
+            <label for="basketBall">篮球</label>
+
+            <input type="radio" v-model="balls" id="pingpongBall" value="乒乓球">
+            <label for="pingpongBall">乒乓球</label>
+        </div>
+
+        <div>
+            <label>请选择一个省份：</label>
+            <select v-model="province">
+                <option value="0" selected>--请选择--</option>
+                <option v-for="item in provinceList"
+                        :value="item.id"
+                >{{item.name}}
+                </option>
+            </select>
+        </div>
+
+    </from>
+</div>
+<script>
+    let vue = new Vue({
+        el: "#app",
+        data: {
+            userName: "",
+            message: "",
+            fruits: [],
+            balls: "",
+            provinceList: [
+                {
+                    id: 1,
+                    name: "广东省"
+                },
+                {
+                    id: 2,
+                    name: "广西省"
+                },
+                {
+                    id: 3,
+                    name: "山东省"
+                },
+                {
+                    id: 4,
+                    name: "辽宁省"
+                },
+                {
+                    id: 5,
+                    name: "河北省"
+                }
+            ],
+            province: 0
+        }
+    });
+</script>
+</body>
+</html>

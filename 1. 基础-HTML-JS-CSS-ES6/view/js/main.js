@@ -1,0 +1,1 @@
+import Product from "/view/js/Product.js";

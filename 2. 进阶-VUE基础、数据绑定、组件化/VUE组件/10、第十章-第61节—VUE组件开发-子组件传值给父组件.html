@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>子组件给父组件传值</title>
+    <script src="../js/vue.js"></script>
+    <style>
+        .box {
+            margin: 5px;
+            padding: 5px;
+            border: 1px #D8E1FF;
+            border-radius: 5px;
+            box-shadow: 2px 2px 2px 2px #BABABA;
+        }
+    </style>
+</head>
+<body>
+<div id="app"></div>
+</body>
+</html>
+<!--====================组件====================-->
+<!--组件"爸爸"的模板-->
+<template id="t1">
+    <div>
+        <div>我是爸爸组件</div>
+        想知道儿子的成绩：<span v-if="boyScore>0">{{boyScore}}分</span>
+        <HR>
+        <!--爸爸组件引用"儿子"组件-->
+        <boy @btn-answer="getBoyScore"></boy>
+    </div>
+</template>
+<!--组件"儿子"的模板-->
+<template id="t2">
+    <div class="box">
+        <div>儿子组件，请填写三门成绩</div>
+        <div>
+            <label for="basketball">篮球：</label>
+            <input id="basketball" v-model="basketball">
+        </div>
+        <div>
+            <label for="football">足球：</label>
+            <input id="football" v-model="football">
+        </div>
+        <div>
+            <label for="pingpooball">乒乓球：</label>
+            <input id="pingpooball" v-model="pingpooball">
+        </div>
+        <button @click="btnAnswer">计算总分</button>
+    </div>
+</template>
+
+<script>
+    //爸爸组件定义
+    Vue.component("Father", {
+        template: `#t1`,
+        data() {
+            return {
+                boyScore: 0
+            };
+        },
+        methods: {
+            getBoyScore(val) {
+                this.boyScore = val;
+            }
+        }
+    });
+    //儿子组件定义
+    Vue.component("Boy", {
+        template: `#t2`,
+        data() {
+            return {
+                score: 0,
+                basketball: 0,
+                football: 0,
+                pingpooball: 0
+            }
+        },
+        methods: {
+            btnAnswer() {
+                this.score =
+                     Number(this.basketball)
+                    +Number(this.football)
+                    +Number(this.pingpooball);
+                console.log("总分是=" + this.score);
+                //把事件往上放
+                this.$emit('btn-answer', this.score);
+            },
+        }
+    });
+
+    new Vue({
+        el: '#app',
+        template: `<Father></Father>`
+    });
+</script>
+
+
+

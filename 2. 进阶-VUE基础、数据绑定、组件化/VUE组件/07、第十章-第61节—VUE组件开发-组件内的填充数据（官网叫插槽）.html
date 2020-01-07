@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>组件内的填充数据（官网叫插槽）.html</title>
+    <script src="../js/vue.js"></script>
+    <style>
+        .box {
+            margin: 5px;
+            padding: 5px;
+            border: 1px #D8E1FF;
+            border-radius: 5px;
+            box-shadow: 2px 2px 2px 2px #BABABA;
+        }
+    </style>
+</head>
+<body>
+<div id="app"></div>
+</body>
+</html>
+<!--====================组件====================-->
+<!--组件"爸爸"的模板-->
+<template id="t1">
+    <div >父组件，调用子组件：
+        <Child>
+            <!--下面将填充到子组件的slot内-->
+            <hr>
+            <div style="background-color: #D8E1FF;font-size: 30px;">
+                <div>user name:<input type="text" name="username"></div>
+                <div>pass word:<input type="password" name="password"></div>
+            </div>
+            <div  slot="slot2" style="height: 100px; background-color: red">
+                填充内容
+            </div>
+        </Child>
+    </div>
+</template>
+<!--组件"儿子"的模板-->
+<template id="t2">
+    <div class="box">
+        <div>儿子组件</div>
+        <!--默认的slot，即匿名-->
+        <slot></slot>
+        <!--下面是第二个插槽-->
+        <slot name="slot1"></slot>
+        <!--下面是第三个插槽-->
+        <slot name="slot2"></slot>
+    </div>
+</template>
+
+<script>
+    //爸爸组件定义
+    Vue.component("Father", {
+        template: `#t1`,
+    });
+    Vue.component("Child", {
+        template: `#t2`,
+    });
+
+    new Vue({
+        el: '#app',
+        template: `<Father></Father>`
+    });
+</script>
+
+
+

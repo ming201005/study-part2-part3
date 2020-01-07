@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>父子组件关系</title>
+    <script src="../js/vue.js"></script>
+    <style>
+        .box{
+            margin: 5px;
+            padding: 5px;
+            border: 1px #D8E1FF;
+            border-radius: 5px;
+            box-shadow: 2px 2px 2px 2px #BABABA;
+        }
+    </style>
+</head>
+<body>
+<div id="app"></div>
+</body>
+</html>
+
+<!--组件"爸爸"的模板-->
+<template id="t1">
+    <div>
+        <div>我是爸爸</div>
+        <div>生1儿2女，幸福啊</div>
+        <HR>
+        <!--爸爸组件引用"儿子"组件-->
+        <boy></boy>
+        <!--爸爸组件引用"女儿"组件-->
+        <Girl></Girl>
+        <Girl></Girl>
+    </div>
+</template>
+<!--组件"儿子"的模板-->
+<template id="t2">
+    <div class="box">
+        <div>儿子</div>
+        <div>儿子是高富帅，身高180cm ！</div>
+    </div>
+</template>
+<!--组件"女儿"的模板-->
+<template id="t3">
+    <div class="box">
+        <div>女儿</div>
+        <div>女儿是白富美！</div>
+    </div>
+</template>
+
+<script>
+    //爸爸组件定义
+    Vue.component("Father", {
+        template: `#t1`,
+    });
+    //儿子组件定义
+    Vue.component("Boy", {
+        template: `#t2`,
+    });
+    //女儿组件定义
+    Vue.component("Girl", {
+        template: `#t3`,
+    });
+    new Vue({
+        el: '#app',
+        template: `<Father></Father>`
+    });
+</script>
+
+
+

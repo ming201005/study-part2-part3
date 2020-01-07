@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>条件渲染</title>
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <div v-if="flag"> {{msg}}</div>
+    <hr>演示if else
+    <div v-if="score<60">不及格</div>
+    <div v-else-if="score>=60 && score<70">良好</div>
+    <div v-else-if="score>=70 && score<90">优秀</div>
+    <div v-else>优异</div>
+</div>
+<script>
+    let vue = new Vue({
+        el: "#app",
+        data: {
+            score  : 50,
+            flag : false,
+            msg  : '信息显示'
+        }
+    });
+</script>
+</body>
+</html>

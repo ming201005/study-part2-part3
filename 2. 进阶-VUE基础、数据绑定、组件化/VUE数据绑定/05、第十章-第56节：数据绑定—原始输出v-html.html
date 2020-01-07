@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>原始输出</title>
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <span v-html="htmlStr"></span>
+</div>
+<script>
+    let vue = new Vue({
+        el: "#app",
+        data: {
+            htmlStr: `<div style="border-style: solid;
+                               border-width: thick;
+                               border-color: blue;
+                               background-color: aliceblue;">
+                    这是一个HTML标签的信息。
+                    </div>`
+        }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>组件定义（全局组件）</title>
+    <script src="../js/vue.js"></script>
+</head>
+
+<body>
+<div id="app">
+    <!--引用组件-->
+    <component1></component1>
+    <hr>
+    <!--引用组件-->
+    <div><component2></component2></div>
+</div>
+<script>
+
+    Vue.component("Component1",{
+        template: `<div>我是全局组件1。</div>`
+    });
+    Vue.component("Component2",{
+        template: `<div>我是全局组件2。</div>`
+    });
+    new Vue({
+        el: '#app',
+    });
+</script>
+</body>
+</html>

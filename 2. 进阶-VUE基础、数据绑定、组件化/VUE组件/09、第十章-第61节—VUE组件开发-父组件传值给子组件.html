@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>父组件给子组件传值</title>
+    <script src="../js/vue.js"></script>
+    <style>
+        .box{
+            margin: 5px;
+            padding: 5px;
+            border: 1px #D8E1FF;
+            border-radius: 5px;
+            box-shadow: 2px 2px 2px 2px #BABABA;
+        }
+    </style>
+</head>
+<body>
+<div id="app"></div>
+</body>
+</html>
+<!--====================组件====================-->
+<!--组件"爸爸"的模板-->
+<template id="t1">
+    <div>
+        <div>我是爸爸</div>
+        <div>生1儿2女，幸福啊</div>
+        <HR>
+        <!--爸爸组件引用"儿子"组件-->
+        <boy :name="'莫晓东'"  :gifts="balls" :msg="'儿子，知道你喜欢体育，好好加油！'"></boy>
+        <!--爸爸组件引用"女儿"组件-->
+        <Girl :name="'莫小贝'" :gifts="fruits" :msg="toGirl2Msg"></Girl>
+        <Girl :name="'莫小美'" :gifts="books" :msg="'加油，你是最棒的，文艺范。'"></Girl>
+    </div>
+</template>
+<!--组件"儿子"的模板-->
+<template id="t2">
+    <div class="box">
+        <div>儿子:{{name}},儿子是高富帅，身高180cm ！</div>
+        <span>收到爸爸的礼物：</span>
+        <ul>
+            <li v-for="item in gifts">{{item}}</li>
+        </ul>
+        <span>收到爸爸的祝福：{{msg}}</span>
+    </div>
+</template>
+<!--组件"女儿"的模板-->
+<template id="t3">
+    <div class="box">
+        <div>女儿:{{name}},女儿是白富美！</div>
+        <span>收到爸爸的礼物：</span>
+        <ul>
+            <li v-for="item in gifts">{{item}}</li>
+        </ul>
+        <span>收到爸爸的祝福：{{msg}}</span>
+    </div>
+</template>
+
+<script>
+    //爸爸组件定义
+    Vue.component("Father", {
+        template: `#t1`,
+        data() {
+            return {
+                //父组件的数据
+                //准备给孩子们的礼物
+                fruits : ["苹果","香蕉","梨"],
+                balls  : ["篮球","足球"],
+                books  : ["《绝代双骄》","《红楼梦》","《西游记》"],
+                toGirl2Msg :'特别叮嘱少吃垃圾食品，给你买了水果。'
+            };
+        }
+    });
+    //儿子组件定义
+    Vue.component("Boy", {
+        template: `#t2`,
+        //接收父亲送来的礼物（用props定义参数接收）
+        props:{
+            name :String,
+            msg  :String,
+            gifts :Array
+        }
+    });
+    //女儿组件定义
+    Vue.component("Girl", {
+        template: `#t3`,
+        //接收父亲送来的礼物（用props定义参数接收）
+        props:{
+            name :String,
+            msg  :String,
+            gifts :Array
+        }
+    });
+    new Vue({
+        el: '#app',
+        template: `<Father></Father>`
+    });
+</script>
+
+
+

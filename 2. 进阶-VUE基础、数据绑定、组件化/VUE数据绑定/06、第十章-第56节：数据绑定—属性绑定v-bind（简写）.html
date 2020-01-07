@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>$Title$</title>
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+<style>
+    .class1{
+        /*红色字体*/
+        color: red;
+    }
+    .class2{
+        /*大号字体*/
+        font-size: 30px;
+
+    }
+    .class3{
+        /*加背景色*/
+        background-color: blue;
+    }
+</style>
+<div id="app">
+    <div v-bind:id="id">用户ID</div>
+    <!--也可以写成如下-->
+    <!--<div :id="id">用户ID</div>-->
+    <hr>
+    <div :class="styleName">样式名称</div>
+    <!--同等于-->
+    <div v-bind:class="styleName">样式名称</div>
+
+    <hr>绑数组——属性有多个值的，可以绑数组:
+    <div :class="['class1','class2','class3']">你好，vue。</div>
+
+    <hr>绑数组——给样式绑定的数组可以判断其中一个是否显示:
+    <div :class="[{'class1': action},'class2','class3']">你好，vue。</div>
+
+    <hr>绑对象——还可以决定哪个样式显示(显示1，2的样式):
+    <div :class="{class1: isStyles[0], class2: isStyles[1],class3:isStyles[2]}">你好，vue。</div>
+
+
+    <hr>style属性设置
+    <div :style="{backgroundColor:'red',fontSize: size+'px',}">style样式</div>
+</div>
+<script>
+    let vue = new Vue({
+        el: "#app",
+        data: {
+            id : "userID",
+            styleName : "myClass",
+            isStyles : [true,true,false],
+            action : false,
+            size  : 30
+
+        }
+    });
+</script>
+</body>
+</html>

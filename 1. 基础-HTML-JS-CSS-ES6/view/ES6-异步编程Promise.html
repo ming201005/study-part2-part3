@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ES6语法和新特性——ES6-异步编程Genertor</title>
+</head>
+<body>
+
+</body>
+<script>
+
+    //问题1：希望是顺序执行的，但是。。。。。后者先执行了。
+    {
+        function callback() {
+            let a = 10;
+            let b = 5;
+            if (b==null || b==0) throw  "b不能等于0或null。";
+            let   c = a/b;
+            console.log('2、【没有Promise】希望执行到我是第二步。c=',c);
+        }
+
+        console.log('1、【没有Promise】开始执行...');
+        // 1秒钟后调用callback函数
+        setTimeout(callback, 1000);
+
+        console.log('3、【没有Promise】我希望在setTimeOut之后执行。');
+
+        /*
+         运行结果：
+         1、【没有Promise】开始执行...
+         3、【没有Promise】我希望在setTimeOut之后执行。
+         2、【没有Promise】希望执行到我是第二步。c= 2
+         */
+
+    }
+    //如何解决问题1呢？
+    {
+
+
+        console.log('============================');
+
+        function callback() {
+            let a = 10;
+            let b = 0;
+            if (b==null || b==0) throw  "b不能等于0或null。";
+            let   c = a/b;
+            console.log('3、希望执行到我是第二步。c=',c);
+        }
+
+        console.log('1、开始执行...');
+        //Promise登场
+        new Promise((resolve, reject) => {
+            console.log('2、进来了...');
+            setTimeout(function () {
+                try {
+                    callback();
+                    resolve("success");
+                }catch (e) {
+                    reject("err");
+                }
+            }, 1000);
+        }).then(msg=>{
+            console.log('4、执行完毕...成功：',msg);
+        }).catch(msg=>{
+            console.log('4、执行完毕...失败：',msg);
+        })
+
+        /*
+         运行结果：
+         1、开始执行...
+         2、进来了...
+         3、希望执行到我是第二步。c= 2
+         4、执行完毕...成功： success
+           （ 如果把b改成 b=0），第四步变成：
+            4、执行完毕...失败： err
+         */
+    }
+
+</script>
+</html>

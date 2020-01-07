@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>组件的使用</title>
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <!--第一种用法，如下：-->
+    <!--<Component2></Component2>-->
+</div>
+<script>
+
+    Vue.component("Component1",{
+        template: `<div>我是全局组件1。</div>`
+    });
+    Vue.component("Component2",{
+        template: `<div>我是全局组件2。</div>`
+    });
+
+    new Vue({
+        el: '#app',
+        //第二种用法，如下：
+        //也可以在这里的模板使用组件,模板会将挂载的id=app覆盖。
+        template:`<component1></component1>`
+    });
+</script>
+</body>
+</html>

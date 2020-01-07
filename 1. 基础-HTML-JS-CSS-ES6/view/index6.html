@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script src="js/person01.js"></script>
+</head>
+<body>
+<script>
+//主要演示：面向对象编程思想：类的定义、类的调用（方式2）
+
+var myPeople = new People("张良");
+myPeople.IntroduceChinese();
+
+var p1 = new Person("张三");
+p1.Introduce();
+
+var p2 = new Person("李兰","女",19);
+p2.Introduce();
+p2.IntroduceChinese();
+
+//
+var str = "abc 我是谁";
+str.myfun();
+
+</script>
+</body>

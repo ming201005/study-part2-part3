@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!--网页头部-->
+
+<head>
+  <title>网页标题</title>
+  <meta content="text/html; charset=UTF-8">
+  <style>
+    body{
+      margin: 5px auto;
+      width: 600px;
+    }
+    .container {
+      /*父元素必须设置为flex*/
+      display: flex;
+      height: 300px;
+      background-color: blue;
+      
+      /* flex-direction:column-reverse; */
+      /* flex-wrap: wrap; */
+      align-items:stretch;
+    }
+    .item {
+      margin: 5px;
+      width: 150px;
+      line-height: 150px;
+      vertical-align: middle;
+      text-align: center;
+      background-color:gold;
+    }
+    .itemImg{
+      background:url(bg_flower.gif);
+      background-repeat:no-repeat;
+      background-size:100% ;
+      -webkit-background-origin:content-box; /* Safari */
+      background-origin:content-box;
+    }
+  </style>
+</head>
+<!--网页主要内容部分-->
+
+<body>
+<div class="container">
+  <div class="item">1</div>
+  <div class="item">2</div>
+  <div class="item">3</div>
+  <div class="item">4</div>
+  <div class="item">5</div>
+  <div class="item">6</div>
+</div>
+</body>
+<!--动态JS脚本部分-->
+<script>
+  var msg = "hello，我是JavaScript！";
+  alert(msg);
+
+
+</script>
+
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!--网页头部-->
+
+<head>
+  <title>js-控制语句</title>
+  <meta content="text/html; charset=UTF-8">
+</head>
+<!--网页主要内容部分-->
+
+<body>
+  <div class="container">
+  </div>
+</body>
+<!--动态JS脚本部分-->
+<script>
+
+  //for
+  var array = [1, 2, 3, 4, 5, 6, 7];
+  for (var i = 0; i < array.length; i++) {
+    console.log(i, array[i]);
+  }
+
+  //for in
+  var array = [10, 12, 23, 45, 5, 6, 20];
+  for (let index in array) {
+    console.log(index, array[index]);
+  };
+
+  var A = {
+    a: 1,
+    b: 2,
+    c: 3,
+    d: "hello world"
+  };
+
+  for (let k in A) {
+    console.log(k, A[k]);
+  }
+
+  //forEach
+  var array = [10, 12, 23, 45, 5, 6, 20];
+  array.forEach(item => {
+    console.log(item);
+  });
+  array.forEach(function (v) {
+    console.log(v);
+  });
+
+  //for of
+  var array = [10, 12, 23, 45, 5, 6, 20];
+  for (let v of array) {
+    console.log(v);
+  };
+  let s = "helloabc";
+  for (let c of s) {
+    console.log(c);
+  }
+
+  //while
+  var array = [10, 12, 23, 45, 5, 6, 20];
+  let row = 0;
+  while (row < array.length) {
+    console.log(row, array[row]);
+    row++;
+  }
+
+  // do while
+  // var array = [10, 12, 23, 45, 5, 6, 20];
+  // let row = 0;
+  // do{
+  //   console.log(row, array[row]);
+  //   row ++;
+  // }while (row < array.length) 
+
+  var arr2 = ["张三", "李四", "王五"];
+  try {
+    var i = 1;
+    var type = typeof i;
+    console.log("type=", type);
+    if (!("number" === type)) {
+      throw "必须是数字类型";
+    }
+    if (i === 0) {
+      throw "被除数不能等于零";
+    }
+    for (; i < arr2.length; i++) {
+
+      if (i == 2) {
+        continue;
+      }
+      console.log(i + "====>" + arr2[i]);
+    }
+  } catch (err) {
+    console.log("err msg=>", err);
+  }
+</script>
+
+</html>

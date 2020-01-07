@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script src="getData.js"></script>
+</head>
+<body>
+<script>
+//主要演示：函数返回值的使用、公共函数提取到一个公共的文件。
+function call(){
+    var rs = checkName("李四");
+    if(rs){
+        alert("对不起，该账号已存在！")
+    }else{
+        alert("该账号还没人使用，请赶快注册吧！")
+    }
+}
+
+</script>
+<div>
+    <input type="button" onclick="call()" value="点击我一下">
+    <div id="table"></div>
+</div>
+</body>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ES6语法和新特性</title>
+    <script src="js/ES6-Class.js"></script>
+</head>
+<body>
+</body>
+<script>
+    //创建爷爷
+    console.log("1、爷爷实例化=====================");
+    let person = new GrandFather("001","刘翔",65);
+    person.info();
+    person.run();
+
+    console.log("2、父亲实例化=====================");
+    //创建一个孩子
+    let father = new Father("002","刘胜利","35岁","职务是软件工程师");
+    father.info();
+    father.run();
+
+    console.log("3、孩子实例化=====================");
+    //创建一个孩子
+    let child1 = new Child("003","刘小军","12岁","小学5年级","成绩优异","喜欢篮球","偶像是麦迪");
+    child1.info();
+    child1.run();
+
+    console.log("4、孩子实例化=====================");
+    //创建一个孩子
+    let child2 = new Child("005","刘小兰","8岁","小学2年级","国家8级舞蹈");
+    child2.info();
+    child2.run();
+</script>
+</html>

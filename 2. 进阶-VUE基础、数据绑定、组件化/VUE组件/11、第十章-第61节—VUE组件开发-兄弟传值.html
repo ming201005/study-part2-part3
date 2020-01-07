@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>兄弟传值</title>
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+<div id="app"></div>
+</body>
+</html>
+<!--====================组件====================-->
+<!--组件"爸爸"的模板-->
+<template id="t1">
+    <div>
+        <child-a></child-a>
+        <child-b></child-b>
+    </div>
+</template>
+<!--组件"儿子1"的模板-->
+<template id="t2">
+    <div>
+        <button @click="sendtoB">点我一下，把数据传给兄弟</button>
+    </div>
+</template>
+
+<!--组件"儿子1"的模板-->
+<template id="t3">
+    <div style="height: 100px;line-height: 100px; font-size: 35px;">
+        <span>{{showData}}</span>
+    </div>
+</template>
+
+<script>
+    let event = new Vue();
+
+    //爸爸组件定义
+    Vue.component("Father", {
+        template: `#t1`
+    });
+    //儿子1组件定义
+    Vue.component("ChildA", {
+        template: `#t2`,
+        data() {
+            return {
+                msg:"Child1的值"
+            }
+        },
+        methods: {
+            sendtoB() {
+                event.$emit('msg-send',this.msg);
+            },
+        }
+    });
+
+    //儿子2组件定义
+    Vue.component("ChildB", {
+        template: `#t3`,
+        data() {
+            return {
+                showData : ''
+            }
+        },
+        mounted() {
+            event.$on('msg-send',data =>{
+                this.showData = data;
+            });
+        }
+    });
+
+    new Vue({
+        el: '#app',
+        template: `<Father></Father>`
+    });
+</script>
+
+
+

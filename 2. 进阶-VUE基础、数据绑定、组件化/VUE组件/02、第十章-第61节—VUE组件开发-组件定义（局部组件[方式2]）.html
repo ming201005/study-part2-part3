@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>组件定义（局部组件定义【方式二】）</title>
+    <script src="../js/vue.js"></script>
+</head>
+
+<body>
+<div id="app">
+    <!--引用组件-->
+    <Component1></Component1>
+    <hr>
+    <!--引用组件-->
+    <div><Component2></Component2></div>
+</div>
+<script>
+    let Component1 = {
+        template: `<div>我内嵌在VUE实例的是组件1。</div>`
+    };
+    let Component2 = {
+        template: `<div>我内嵌在VUE实例的是组件2。</div>`
+    };
+    new Vue({
+        el: '#app',
+        //方式1：可以直接在里面写，注册局部组件。
+        components: {
+            Component1,
+            Component2,
+        },
+
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script src="js/ajax.js"></script>
+</head>
+<!--网页主要内容部分-->
+<body>
+  <div>
+    <div>
+      名称：<input id="productTypeName" type="text" value="" />
+    </div>
+    <div>
+      排序：<input id="productTypeSort" type="number" value="" />
+    </div>
+    <button onclick="add()">新增数据</button>
+  </div>
+  <hr>
+  <div id="app"></div>
+</body>
+<!--动态JS脚本部分-->
+<script>
+  //创建Ajax对象
+  let ajax = new Ajax();
+
+  get();
+
+  //获取数据
+  function get() {
+    //api URL
+    let url = "api-product/productType";
+
+    //调用ajax,用ES6箭头函数回调
+    ajax.get(url, rs=>{
+      if (rs.code == 0) {
+        //获取数据
+        let data = rs.data.records;
+        let app = $("app");
+        if (data.length > 0) {
+          //先清除原来的数据
+          removeLi(app);
+          //绑定数据
+          data.forEach(item => {
+            let li = document.createElement("li");
+            li.textContent = item.id + "==>" + item.productTypeName;
+            app.appendChild(li);
+          });
+        }
+      }
+    });
+  }
+
+  //新增数据
+  function add() {
+    let productTypeName = $("productTypeName").value;
+    let productTypeSort = $("productTypeSort").value;
+    if(productTypeName =="" || productTypeName == null){
+      alert("请输入名称！");
+      return;
+    }
+    if(productTypeSort =="" || productTypeSort == null){
+      alert("请输入排列数字！");
+      return;
+    }
+    let url = "api-product/productType";
+    //要提交的数据
+    let data = {
+      id: null,
+      productTypeImgId: 0,
+      productTypeName: productTypeName,
+      productTypePerentId: 0,
+      productTypeSort: productTypeSort,
+      productTypeState: 1
+    };
+    //ES6中字符格式化。
+    console.log(`data==>${data}`);
+
+    //调用ajax，也可以用传统方式
+    ajax.post(url, data, function (rs) {
+      if (rs.code == 0) {
+        //加载新数据
+        console.log("结果：", rs.msg);
+        get();
+      }
+    });
+  }
+
+  //通过id获取对象
+  function $(id) {
+    return document.getElementById(id);
+  }
+
+  // 删除某个节点的所有子节点
+  function removeLi(app) {
+    //先清除原来的数据
+    if (app.hasChildNodes()) {
+      let childNodes = app.children;
+      let len = childNodes.length;
+      while ((len--) > 0) {
+        app.removeChild(childNodes[len]);
+      }
+    }
+  }
+
+
+</script>
+
+</html>

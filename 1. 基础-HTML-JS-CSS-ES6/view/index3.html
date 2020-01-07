@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <script src="getData.js"></script>
+</head>
+<body>
+<script>
+//主要演示：函数的定义：无参数、有参数、返回值、函数作为参数（回调方法）、缺省传递参数、等等。
+
+/**
+ * 无参数函数 
+ */
+function myfun() {
+    //todo
+    console.log("我是无参数的函数");
+}
+
+/**
+ * 到时候用vue怎么调用它。。。
+ */
+function doClick(name,id) {
+    console.log("doClick====>name="+name+",id="+id);
+    myfun01(name,id,function(rs){
+        var str = "";
+        var color = "";
+        for(index in rs) {
+            if(rs[index].mn<100){
+               color = "red;";
+            }else{
+               color = "";
+            }
+            str += "<div style='color:"+color+"' > "+rs[index].yanghang+"   "+rs[index].mn+"   "+rs[index].des+"</div>";
+        }
+        document.getElementById("table").innerHTML = str;
+    });
+}
+
+</script>
+<div>
+    <input type="button" onclick="myfun()" value="点击我一下">
+    <input type="button" onclick="doClick('王大爷',1)" value="点击我一下1">
+    <input type="button" onclick="doClick('李大爷',2)" value="点击我一下2">
+    <div id="table"></div>
+</div>
+</body>

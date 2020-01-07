@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script src="js/myobject.js"></script>
+    <script src="js/person.js"></script>
+</head>
+<body>
+<script>
+//主要演示：面向对象编程思想：类的定义、类的调用（方式一）
+
+//====================
+//调用Person
+Person.init("001","张三");
+Person.run();
+Person.Tell.call();
+
+//====================
+//调用Person
+Person.id   = "002";
+Person.name = "李兰";
+Person.sex  = "女";
+Person.run();
+
+
+//另外一种定义方式
+obj.run();
+
+
+</script>
+<div>
+    <input type="button" onclick="call()" value="点击我一下">
+    <div id="table"></div>
+</div>
+</body>

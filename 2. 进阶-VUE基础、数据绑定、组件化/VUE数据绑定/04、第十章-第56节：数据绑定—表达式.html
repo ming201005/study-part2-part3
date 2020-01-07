@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表达式</title>
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <span>num1+num2={{num1+num2}}</span>
+    <hr>
+    <span>(num1+num2) * 500 ={{(num1+num2)*500}}</span>
+    <hr>
+    <div>{{msg.split("，")}}</div>
+</div>
+<script>
+    let vue = new Vue({
+        el: "#app",
+        data: {
+            num1: 10,
+            num2:15,
+            msg :"苹果，香蕉，梨"
+        }
+    });
+</script>
+</body>
+</html>

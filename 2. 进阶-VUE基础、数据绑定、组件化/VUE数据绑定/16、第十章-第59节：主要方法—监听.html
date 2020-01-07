@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>主要方法—监听</title>
+    <script src="../js/vue.js"></script>
+</head>
+
+<body>
+<div id="app">
+    监听得到对象： {{userObj}}
+</div>
+<script>
+
+    let vue = new Vue({
+        el: "#app",
+        data: {
+            id:0,
+            name:"",
+            userObj:{id:0,name:""}
+        },
+
+        //值改变时才出发，如果值和上一次的值一样，不会触发。
+        watch:{
+            id(val) {
+
+                console.log("得到==》id=",val);
+                this.userObj.id = val ;
+            },
+
+            /**
+             * 监听函数完整的参数有两个
+             * 第一个是新值、第二个是旧值
+             * @param newVal
+             * @param oldVal
+             */
+            name(newVal,oldVal){
+                console.log(newVal,oldVal);
+                this.userObj.name = newVal ;
+            }
+        }
+    });
+</script>
+</body>
+</html>

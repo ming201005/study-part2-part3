@@ -1,0 +1,5 @@
+# Project exclude paths
+/3. 进阶-VUE脚手架搭建项目和组件化示例/webrouter-components/node_modules/
+/3. 进阶-VUE脚手架搭建项目和组件化示例/webrouter-element-ui/node_modules/
+/3. 进阶-VUE脚手架搭建项目和组件化示例/webstore/node_modules/
+/3. 进阶-VUE脚手架搭建项目和组件化示例/webvuex/node_modules/

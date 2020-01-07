@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>组件模板抽离</title>
+    <script src="../js/vue.js"></script>
+</head>
+
+<body>
+<div id="app">
+    <!--引用组件1-->
+    <component1></component1>
+    <hr>
+    <!--引用组件2-->
+    <component2></component2>
+    <HR>
+    <!--引用组件1（多次引用）-->
+    <component1></component1>
+</div>
+<!--组件1的模板（建议用这种方式）-->
+<template id="t1">
+    <div>我是全局组件1,现在模板在外面了，我用template包住，请注意我的id=t1。</div>
+</template>
+
+<!--组件2的模板（不建议用这种方式）-->
+<script type="text/x-template" id="t2">
+    <div>我是全局组件2，可以用script包住。</div>
+</script>
+
+<script>
+
+    Vue.component("Component1",{
+        template: `#t1`
+    });
+    Vue.component("Component2",{
+        template: `#t2`
+    });
+    new Vue({
+        el: '#app',
+    });
+</script>
+</body>
+</html>

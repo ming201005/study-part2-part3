@@ -1,4 +1,4 @@
-# study-part2-part3介绍
+# 1 study-part2-part3介绍
    端入门和进阶t是《全栈工程师修炼之路》的Part2、Part3部分。本教程是书籍+源代码+视频（未来录制）
 本教程是本人原创教程，90%以上示例代码都经过本人亲自所敲，引用他人示例的本人会标明引入来源。
 原创不容易，请支持。如有雷同，请多多包涵！
@@ -10,14 +10,14 @@
 4. 前端进阶的Part3：VUE视图数据绑定、VUE组件化开发、VUE+axios等；
 5. 前端进阶的Part3：NODE、NPM基本命令、VUE CLI3脚手架、VUE路由、VUE状态管理等；
 
-# 4 下载后准备的基本步骤：
+# 3 下载后准备的基本步骤：
 1. 基础的前端直接运行即可；
 2. 脚手架创建的项目请自行学习node一些知识、npm命令，然后再看Part3部分的书籍；
 3. 脚手架创建的项目请事先下载node、vue cli3（也可按书本提示操作）；
 4. 脚手架创建的项目如果运行失败，请删除掉node_modules，再运行npm install；
 5. 如有任何问题，请加微信留言；
 
-# 3 作者简介 莫小明
+# 4 作者简介 莫小明
  
   ![image.png](https://upload-images.jianshu.io/upload_images/18601763-68f09e5e7bcd4262.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 **悄悄的扫一下微信，就可以获得PDF电子书，B站：[https://space.bilibili.com/432367773](https://space.bilibili.com/432367773)**
@@ -39,5 +39,5 @@
 * 北京某央企担保业务和全国各省市农业担保业务管理平台；
 * 自主研发低代码平台；
 
-# 4 书籍本章部分截图
+# 5 书籍本章部分截图
 

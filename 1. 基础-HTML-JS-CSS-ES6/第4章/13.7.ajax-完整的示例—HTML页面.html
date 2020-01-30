@@ -4,20 +4,26 @@
     <meta charset="UTF-8">
     <script src="./class/Ajax.js"></script>
     <script src="./class/FruitAction.js"></script>
+    <style>
+        .box{
+            display: flex;
+        }
+    </style>
 </head>
 <!--网页主要内容部分-->
 <body>
-<div>
-    <div>
-        水果：<input id="name" type="text" value="" />
+    <div class="box">
+        <span>
+            水果：<input id="name" type="text" value="" />
+        </span>
+        <span>
+            说明：<input id="des"  type="text" value="" />
+        </span>
+        <button onclick="fruit.addData()"
+                style="margin-left: 10px;">新增数据</button>
     </div>
-    <div>
-        说明：<input id="des"  type="text" value="" />
-    </div>
-    <button onclick="fruit.addData()">新增数据</button>
-</div>
-<hr>
-<div id="app"></div>
+    <hr>
+    <div id="app"></div>
 </body>
 <!--动态JS脚本部分-->
 <script>

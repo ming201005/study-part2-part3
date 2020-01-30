@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>有参数和有返回值的函数</title>
+</head>
+<body>
+<script>
+    //有参数，有返回值的函数
+    function myfun03(num,msg) {
+        let str = "msg="+msg+",num="+num;
+        return "结果=>>"+str;
+    }
+
+    //调用,从外部传值5、hello,并接收返回值。
+    let rs = myfun03(5,"hello");
+    console.log(rs);
+</script>
+</body>
+</html>

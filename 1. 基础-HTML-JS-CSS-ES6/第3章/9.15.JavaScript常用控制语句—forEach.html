@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript常用控制语句—forEach</title>
+</head>
+<body>
+<script>
+    //forEach 遍历数组，用函数作为参数调用
+    const array = [10, 12, 23, 45, 5, 6, 20];
+    array.forEach(function(v) {
+        console.log(v);
+    });
+    console.log("------------");
+    //forEach 遍历数组，用箭头符返回当前行（“变量=>”方式）
+    array.forEach(item => {
+        console.log(item);
+    });
+</script>
+</body>
+</html>

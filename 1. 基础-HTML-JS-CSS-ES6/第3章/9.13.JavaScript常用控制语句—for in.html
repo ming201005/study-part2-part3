@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript常用控制语句—for in</title>
+</head>
+<body>
+<script>
+    //-------------------------------------
+    //for in 遍历数组
+    console.log("-----------遍历数组");
+    const array = [10, 12, 23, 45, 5, 6, 20];
+    for (let index in array) {
+        console.log(index,"==>", array[index]);
+    }
+
+    //-------------------------------------
+    //for in 遍历对象
+    console.log("-----------遍历对象");
+    const obj = {
+        num : 45212546585,
+        name: "张三",
+        age : 35,
+        des : "我叫张三"
+    };
+    for (let key in obj) {
+        console.log(key,"==>", obj[key]);
+    }
+</script>
+</body>
+</html>

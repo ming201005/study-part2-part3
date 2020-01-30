@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript常用控制语句—while、do while</title>
+</head>
+<body>
+<script>
+    //while
+    let array = [10, 12, 23, 45, 5, 6, 20];
+    let row = 0;
+    while (row < array.length) {
+        console.log(row, array[row]);
+        row ++;
+    }
+
+    console.log("------------------");
+    //do while
+    row = 0;
+    do{
+        console.log(row, array[row]);
+        row ++;
+    }while (row < array.length)
+</script>
+</body>
+</html>

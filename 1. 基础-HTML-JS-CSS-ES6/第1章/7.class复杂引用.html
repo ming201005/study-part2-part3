@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>class复杂引用</title>
+    <style>
+        .line {
+            width: 300px;
+            border-style: solid;
+            border-width: 0 0 1px 0;
+            margin: 5px;
+            padding: 3px;
+        }
+        .redline{
+            border-color: sienna;
+        }
+        .blueline{
+            border-color: blue;
+            border-width: 2px 5px
+        }
+        .coler{
+            font-size: 20px;
+            color: chartreuse;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+  <div>
+    <div class="line">有底线</div>
+    <div class="line redline">红色底线，默认字号</div>
+    <div class="line redline coler">红色底线，20号字体</div>
+    <div class="line blueline coler">蓝色底线，20号字体</div>
+  </div>
+</body>
+</html>

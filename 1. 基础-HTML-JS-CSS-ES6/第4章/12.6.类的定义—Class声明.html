@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>类的定义—Class声明</title>
+    <script src="./class/Cart.js"></script>
+</head>
+<body>
+<script>
+
+    //==================================
+    //给购物车装产品
+    let product01 = new Map();
+    product01.set("productId","01");
+    product01.set("productName","苹果");
+    product01.set("price","6.9元/公斤");
+    product01.set("saleCount","3斤");
+
+    let product02 = new Map();
+    product02.set("productId","02");
+    product02.set("productName","雪梨");
+    product02.set("price","2.8元/公斤");
+    product02.set("saleCount","5斤");
+
+    let product03 = new Map();
+    product03.set("productId","03");
+    product03.set("productName","草莓");
+    product03.set("price","16.5元/公斤");
+    product03.set("saleCount","1.5斤");
+    //==================================
+
+    //创建购物车对象实例
+    let shopCart = new Cart();
+    //假如购买了3个商品
+    shopCart.addProduct(product01);
+    shopCart.addProduct(product02);
+    shopCart.addProduct(product03);
+
+    //显示购物的商品
+    shopCart.showProdudList();
+
+    //删除productID=“02”的商品
+    console.log("删除productID='02'的商品");
+    shopCart.removeProduct("02");
+    //显示购物的商品
+    shopCart.showProdudList();
+
+</script>
+</body>
+</html>

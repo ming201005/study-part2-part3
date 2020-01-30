@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>绝对定位</title>
+    <style>
+        .outBox {
+            margin: 5px auto;
+            padding: 0px;
+            width: 600px;
+            height: 350px;
+            border: 1px solid blue;
+        }
+        .box_absolute {
+            position: absolute;
+            top: 20px;
+            left: 30px;
+        }
+        .box1 {
+            float:left;
+            height: 100px;
+            width: 150px;
+            margin: 5px;
+            background-color: burlywood;
+            border: 5px solid green;
+        }
+    </style>
+</head>
+<body>
+   <div class="outBox">
+        <div class="box1">框1</div>
+        <div class="box1 box_absolute">框2</div>
+        <div class="box1">框3</div>
+   </div>
+</body>
+</html>

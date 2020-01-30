@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript变量—var</title>
+</head>
+<body>
+<script>
+    //var定义变量
+    var number = 10;
+    var string = "一串文字";
+    console.log("string被覆盖前="+string);
+    if(number == 10) {
+        //再定义string
+        var string = "中国人民英雄";
+        console.log("if里面的string="+string);
+    }
+    console.log("外面的string="+string);
+
+</script>
+</body>
+</html>

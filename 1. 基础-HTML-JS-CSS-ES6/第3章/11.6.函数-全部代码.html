@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数—全部代码</title>
+</head>
+<body>
+<!--动态JS脚本部分-->
+<script>
+    //无参数无返回值的函数
+    function myfun01() {
+        let num = 5;
+        let msg = "hello";
+        console.log(msg,"num==>",num);
+    }
+    //调用
+    myfun01();
+
+    //有参数，无返回值的函数
+    function myfun02(num,msg) {
+        console.log(msg,"num==>",num);
+    }
+    //调用,从外部传值5、hello
+    myfun02(5,"hello");
+
+    //有参数，有返回值的函数
+    function myfun03(num,msg) {
+        let str = "msg="+msg+",num="+num;
+        return "结果=>>"+str;
+    }
+    //调用,从外部传值5、hello,并接收返回值。
+    let rs = myfun03(undefined,"hello");
+    console.log(rs);
+
+    //callFun是另外一个函数
+    function myfun04(msg,callFun) {
+        //调用callFun
+        let v1;
+        callFun(msg);
+    }
+    //调用方式1
+    myfun04("hello，你好！",function(str){
+        console.log(str);
+    });
+    //调用方式2
+    myfun04("我是张三",str=>{
+        console.log(str);
+    });
+</script>
+</body>
+</html>

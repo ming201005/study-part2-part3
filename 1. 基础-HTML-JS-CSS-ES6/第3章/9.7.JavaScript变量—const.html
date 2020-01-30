@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript变量—const</title>
+</head>
+<body>
+<script>
+    //用const声明的变量必须付初始值，且之后不能再修改。
+    const string = "一串文字";
+    const number = 10;
+    console.log("进入if前string="+string);
+    if(number == 10) {
+        //再定义string
+        const string = "中国人民英雄";
+        console.log("if里面string="+string);
+    }
+    //对用const声明的变量赋值是错的，因为不能对常量赋值
+    //以下对string改变值是错误的。
+    string = "改掉数据！";
+    console.log("if外面string="+string);
+</script>
+</body>
+</html>

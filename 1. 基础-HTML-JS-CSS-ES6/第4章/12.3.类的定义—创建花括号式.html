@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>类的定义—创建花括号式</title>
+    <script src="./class/Person.js"></script>
+</head>
+<body>
+<script>
+    //调用Person
+    Person.init("001","李四");
+    Person.run();
+    Person.Tell.call();
+
+    console.log("...............................");
+    //====================
+    //调用Person
+    Person.id = "002";
+    Person.name = "李兰";
+    Person.sex = "女";
+    Person.run();
+</script>
+</body>
+</html>

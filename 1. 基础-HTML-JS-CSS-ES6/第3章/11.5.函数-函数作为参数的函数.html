@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数作为参数的函数</title>
+</head>
+<body>
+<script>
+    //callFun是另外一个函数
+    function myfun04(msg,callFun) {
+    //调用callFun
+        let v1;
+        callFun(msg);
+    }
+    //调用方式1
+    myfun04("hello，你好！",function(str){
+        console.log(str);
+    });
+
+    //调用方式2 ES6语法，箭头函数调用
+    myfun04("我是张三",str=>{
+        console.log(str);
+    });
+</script>
+</body>
+</html>

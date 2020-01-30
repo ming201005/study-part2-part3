@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>叉轴上对齐align-items：stretch【多种对齐方式】</title>
+    <style>
+        .flexBox {
+            display: flex;
+            width: 560px;
+            height: 230px;
+            margin: 5px auto;
+            background-color: mintcream;
+            border: 1px  solid  dodgerblue;
+        }
+        .itemBox {
+            width: 120px;
+            text-align: center;
+            margin: 5px;
+            color: #ffffff;
+            background-color: #5CA2FF;
+            box-shadow: #BABABA;
+            box-shadow: 2px 2px 0 0 #cecdcd;
+            border-radius: 3px;
+        }
+        .alignitems-stretch{
+            align-items: stretch;
+        }
+        .alignitems-flex-start{
+            align-items: flex-start;
+        }
+        .alignitems-flex-end{
+            align-items: flex-end;
+        }
+        .alignitems-center{
+            align-items: center;
+        }
+        .alignitems-baseline{
+            align-items: baseline;
+        }
+    </style>
+</head>
+<body>
+    <!--交叉轴上铺满：需要把itemBox的高度去掉，才有效果-->
+    <div class="flexBox alignitems-stretch">
+        <div class="itemBox">1</div>
+        <div class="itemBox">2</div>
+        <div class="itemBox">3</div>
+        <div class="itemBox">4</div>
+        <div class="itemBox">5</div>
+        <div class="itemBox">6</div>
+    </div>
+
+    <!--上沿对齐-->
+    <div class="flexBox alignitems-flex-start">
+        <div class="itemBox" style="height: 200px;">1</div>
+        <div class="itemBox" style="height: 150px;">2</div>
+        <div class="itemBox" style="height: 90px;">3</div>
+        <div class="itemBox" style="height: 160px;">4</div>
+        <div class="itemBox" style="height: 130px;">5</div>
+        <div class="itemBox" style="height: 100px;">6</div>
+    </div>
+    <!--下沿对齐-->
+    <div class="flexBox alignitems-flex-end">
+        <div class="itemBox" style="height: 200px;">1</div>
+        <div class="itemBox" style="height: 150px;">2</div>
+        <div class="itemBox" style="height: 90px;">3</div>
+        <div class="itemBox" style="height: 160px;">4</div>
+        <div class="itemBox" style="height: 130px;">5</div>
+        <div class="itemBox" style="height: 100px;">6</div>
+    </div>
+    </div>
+
+    <!--居中对齐-->
+    <div class="flexBox alignitems-center">
+        <div class="itemBox" style="height: 200px; line-height: 100px">1</div>
+        <div class="itemBox" style="height: 150px;">2</div>
+        <div class="itemBox" style="height: 90px;">3</div>
+        <div class="itemBox" style="height: 160px;">4</div>
+        <div class="itemBox" style="height: 130px;">5</div>
+        <div class="itemBox" style="height: 100px;">6</div>
+    </div>
+    </div>
+
+    <!---->
+    <div class="flexBox alignitems-baseline">
+        <div class="itemBox" style="height: 200px; line-height: 100px">1</div>
+        <div class="itemBox" style="height: 150px;">2</div>
+        <div class="itemBox" style="height: 90px; line-height: 90px">3</div>
+        <div class="itemBox" style="height: 160px;">4</div>
+        <div class="itemBox" style="height: 130px;">5</div>
+        <div class="itemBox" style="height: 100px;">6</div>
+    </div>
+    </div>
+</body>
+</html>

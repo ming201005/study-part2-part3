@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>变量赋值—数组结构赋值</title>
+</head>
+<body>
+<script>
+
+    /*
+     解构赋值的分类：
+     1、数组结构赋值（左右都是数组）
+     2、对象结构赋值（左右都是对象）
+     3、字符串结构赋值（左数组、右字符串）
+     4、布尔值结构赋值
+     5、函数参数解构赋值（数组解构赋值在函数上的引用）
+     6、数值解构赋值
+     */
+    {
+        console.log("1、数组结构赋值（左右都是数组）===========");
+        let a,b,c,d,str,strArr;
+        //同时对a、b赋值
+        [a, b]=[15,20];
+        console.log("a=",a);
+        console.log("b=",b);
+
+        //同时对a、str、c赋值
+        [a,str,c] = ["AAA","中国人","C罗"];
+        //可变参数接收数组
+        [d,...strArr]=[5,"A","B","C","D"];
+
+        console.log("a=",a);
+        console.log("str=",str);
+        console.log("c=",c);
+        console.log("d=",d,"strArr=",strArr);
+    }
+
+    {
+        console.log("2、数组结构赋值（左右都是对象）===========");
+        let a,b;
+        //更花哨
+        ({a, b}={a:100,b:200});
+        console.log(a, b);
+    }
+
+    {
+        console.log("3、字符串结构赋值（左数组、右字符串）===========");
+        let a,b,c;
+        [a,b,c] = "ABC";
+
+        console.log(a, b, c);
+    }
+
+    {
+        console.log("4、布尔值结构赋值===========");
+        //TODO
+    }
+
+    {
+        console.log("5.1、函数参数解构赋值（数组解构赋值在函数上的引用）===========");
+        function myFun() {
+            let a,b;
+            [a,b] = [5,6];
+            return [a,b];
+        }
+        let result1,result2;
+        [result1,result2] = myFun();
+        console.log("result1=",result1,"result2=",result2);
+    }
+
+    {
+        console.log("5.2、函数参数解构赋值（接收部分参数）===========");
+        function f1() {
+            return [1,2,3,4,5];
+        }
+        let a,b,c;
+        [a, , ,b]=f1();
+        console.log(a, b);//1 4
+    }
+    {
+        console.log("5.3、函数参数解构赋值（可变参数接收函数返回值）===========");
+        function f2() {
+            return [1,2,3,4,5];
+        }
+        let a,b,c;
+        [a,...b]=f2();
+        console.log(a, b);//1 [2,3,4,5]
+    }
+
+    {
+        console.log("6、对象解构赋值===========");
+        let {id, name,age=25} = {
+            id: "01",
+            name: "张三"
+        };
+
+        console.log(id, name,age);
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>对象扩展</title>
+</head>
+<body>
+<script>
+    {
+        //定义对象直接赋值
+        let [id,name,sex] = ["01","王五","女"];
+        //1、对象增强
+        let obj = {
+            id,
+            name,
+            sex,
+            //定义方法不像以前display : function()
+            display(){
+                console.log(id,name,sex);
+            }
+        }
+        //调用对象display方法
+        obj.display();
+
+        //2、对象比较 同等于 ===
+        let str1 = "中国人";
+        let str2 = "中国人";
+        let eq = Object.is(str1,str2);
+        console.log("eq=",eq);
+
+        //3、赋值某个对象到目标对象
+        const target = { a: 1, b: 2 };
+        const source = { b: 4, c: 5 };
+        const returnedTarget = Object.assign(target, source);
+        console.log("target==>",target);
+        // expected output: Object { a: 1, b: 4, c: 5 }
+        console.log("returnedTarget==>",returnedTarget);
+        // expected output: Object { a: 1, b: 4, c: 5 }
+
+        //4、对象遍历
+        const object1 = {
+            a: 'some string',
+            b: 42
+        };
+        for (let [key, value] of Object.entries(object1)) {
+            console.log(`${key}: ${value}`);
+        }
+    }
+</script>
+</body>
+</html>

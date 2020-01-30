@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数—闭包函数</title>
+</head>
+<body>
+<script>
+    //================================1
+    //闭包函数
+    function myFun(x) {
+        let y=20;
+        return function AB() {
+            return (x+y);
+        }
+    }
+    //注意两个函数后还有 ()
+    console.log(myFun(100)()); //  120
+    //以上调用也可以这样写 :
+    //  let rs = myFun(100);
+    //  rs();
+    let rs = myFun(200);
+    let y = rs();
+    console.log(y); //220
+
+    //================================2
+    //也可以这样定义
+    function  fun02(a,b) {
+        let rs;
+        function get() {
+            rs = a*b;
+            return rs;
+        }
+        return get;
+    }
+    console.log(fun02(10, 30)());
+</script>
+</body>
+</html>

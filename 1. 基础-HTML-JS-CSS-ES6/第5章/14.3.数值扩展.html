@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数据扩展</title>
+</head>
+<body>
+<script>
+    //247 0b二进制（大小写均可）
+    console.log(0b11110111);
+    //4681 0o八进制（大小写均可）
+    console.log(0o11111);
+
+    console.log('15',Number.isFinite(15));        //true
+    console.log('NaN',Number.isFinite(NaN));      //false
+    console.log('1/0',Number.isFinite(1/0));      //false
+    console.log('NaN',Number.isNaN(NaN));         //true
+    console.log('0',Number.isNaN(0));              //false
+
+    console.log('25',Number.isInteger(25));       //true
+    // 25.0=25
+    console.log('25.0',Number.isInteger(25.0));   //true
+    console.log('25.1',Number.isInteger(25.1));   //false
+    console.log('25.0',Number.isInteger('25.0')); //false
+
+    console.log(Number.MAX_SAFE_INTEGER);
+    console.log(Number.MIN_SAFE_INTEGER);
+    //是否位于上面两个数的范围内
+    console.log(Number.isSafeInteger(10));        //true
+    console.log(Number.isSafeInteger('a'));       //false
+
+    //es5：Math.floor，Math.ceil
+    console.log(4.1,Math.trunc(4.1));             //4
+    console.log(4.9,Math.trunc(4.9));             //4
+
+    console.log('-5',Math.sign(-5));              //-1
+    console.log('5',Math.sign(5));                //1
+    console.log('0',Math.sign(0));                //0
+    console.log('a',Math.sign('a'));              //NaN
+
+    //开立方根
+    console.log(Math.cbrt(-1));                   //-1
+    console.log(Math.cbrt(8));                    //2
+
+</script>
+</body>
+</html>

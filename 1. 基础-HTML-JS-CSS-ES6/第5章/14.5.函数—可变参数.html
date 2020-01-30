@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数—可变参数</title>
+</head>
+<body>
+<script>
+    /**
+     * 剩余参数（java中叫可变参数）
+     * 将输入的参数都转为数组
+     */
+    function test01(...arg) {
+        for (let item of arg) {
+            console.log(item);
+        }
+    }
+
+    test01('苹果','香蕉','火龙果');
+
+    /**
+     * 剩余参数只能放在最后一个参数
+     * @param str1
+     * @param str2
+     * @param arg
+     */
+    function test02(str1,str2,...arg) {
+        console.log(str1, str2, arg);
+    }
+
+    test02("语文","数学",'英语','化学','物理');
+
+    //可以直接输出剩余参数变量
+    console.log(...[1,2,4]);
+    console.log(50,88,...[1,2,4,8]);
+</script>
+</body>
+</html>

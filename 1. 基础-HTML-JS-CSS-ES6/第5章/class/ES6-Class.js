@@ -2,7 +2,6 @@
  * 爷爷
  */
 class GrandFather {
-
     /**
      * 构造函数
      * @param id
@@ -31,7 +30,6 @@ class GrandFather {
                      姓名：${this.name},
                      ${this.age}岁。`);
     }
-
 
     //--GET / SET (在webStorm中可以快速生成)
     get id() {
@@ -118,5 +116,4 @@ class Child extends Father {
     _myPrivateFun(){
 
     }
-
 }

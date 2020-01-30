@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数组</title>
+</head>
+<body>
+<script>
+    //1、多个数据转数组 of
+    let arr = Array.of(3, 4, 7, 9, 11);
+    console.log('arr==》', arr);//[3,4,7,9,11]
+    console.log('arr==》', Array.of());//返回[]
+
+    //2、字符串转字符数组 from
+    console.log(Array.from('foo'));
+    // expected output: Array ["f", "o", "o"]
+
+    Array.from(["苹果", "香蕉", "梨"], item => {
+        console.log(item);
+    });
+
+    //3、合并两个数组 concat
+    const array1 = ['a', 'b', 'c'];
+    const array2 = ['d', 'e', 'f'];
+
+    console.log(array1.concat(array2));
+    // expected output: Array ["a", "b", "c", "d", "e", "f"]
+
+    //4、查找find
+    const array = [5, 12, 8, 130, 44];
+
+    const found = array.find(element => element == 8);
+
+    console.log(found);
+
+    //5、找到某个数
+    var findItem = array.indexOf(130);
+
+    //6、删除数据 splice
+    var removedItem = array.splice(findItem, 1);
+    console.log(removedItem,array);
+
+    //7、 过滤filter
+    let fruits = ["苹果","香蕉","梨子","麻花","马蹄"];
+    let newFruits = fruits.filter((value,index)=>{
+        //只查询index大于1的，同时不等于“马蹄”的水果。
+        return index >1 && value !="马蹄";
+    });
+    console.log(newFruits);
+
+    //8、求和
+    let counts = [85,98,95];
+    //previousValue是累计结果，currentValue是当前值
+    //箭头函数后的第二个参数，传递“0”是初始累计值是0
+    let total  = counts.reduce((previousValue,currentValue)=>{
+        return previousValue + currentValue;
+    },0);
+    console.log(total);
+
+</script>
+</body>
+</html>

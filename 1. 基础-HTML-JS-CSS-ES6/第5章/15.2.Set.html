@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Set</title>
+</head>
+<body>
+|<script>
+    //1、新增数据
+    //没有重复值
+    let set = new Set();
+    //add添加值
+    set.add(7);
+    set.add(8);
+    set.add(9);
+    set.add(9); //不能重复
+    console.log('set size=',set.size);//3
+
+    let arr = [1,2,3,4,5,3]; //注意有重复
+    //数组添加值
+    let set1 = new Set(arr);
+    //注意打印的结果，set自动去重
+    //简单循环set
+    set1.forEach(item=>{
+        console.log(item);
+    });
+
+    //2、查找数据
+    console.log(set1.has(5));//true
+
+    //3、删除
+    console.log('delete==》',set1.delete(5),set1);
+
+    //4、清除数据
+    set1.clear();
+    console.log(set1);//set(0)
+
+    //5、遍历set，取得key、value
+    for (let [key,value] of set1.entries()){
+        console.log(key,value)
+    }
+</script>
+</body>
+</html>

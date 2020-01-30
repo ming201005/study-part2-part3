@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Map-数组结合</title>
+</head>
+<body>
+<script>
+    let list = new Array();
+    //map
+    let map1 = new Map();
+    map1.set("id",1);
+    map1.set("name","张三");
+    map1.set("sex","男");
+    //装到数组中
+    list.push(map1);
+
+    let map2 = new Map([['id',2],['name','小兰'],['sex','女']]);
+    //装到数组中
+    list.push(map2);
+
+    //遍历数据
+    list.forEach(item=>{
+        console.log(item);
+    });
+</script>
+</body>
+</html>

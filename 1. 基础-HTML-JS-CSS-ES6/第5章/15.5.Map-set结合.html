@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Map-set结合</title>
+</head>
+<body>
+<script>
+    let setList = new Set();
+    //map
+    let map3 = new Map();
+    map3.set("id",1);
+    map3.set("name","诸葛亮");
+    map3.set("sex","男");
+
+    let map4 = new Map();
+    map4.set("id",2);
+    map4.set("name","周瑜");
+    map4.set("sex","男");
+
+    let map5 = new Map();
+    map5.set("id",3);
+    map5.set("name","小乔");
+    map5.set("sex","女");
+
+    //把三个map加入set
+    setList.add(map3);
+    setList.add(map4);
+    setList.add(map5);
+    //遍历
+    for (let item of setList){
+        console.log("英雄人物=》",item.get("id"), item.get("name"), item.get("sex"));
+    }
+</script>
+</body>
+</html>

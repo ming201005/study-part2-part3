@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>异步编程Promise</title>
+</head>
+<body>
+<script>
+    //如何解决问题1呢(没有Promise情况下)？
+    {
+        console.log('============================');
+        function callback() {
+            let a = 10;
+            let b = 0;
+            if (b==null || b==0) throw  "b不能等于0或null。";
+            let   c = a/b;
+            console.log('3、希望执行到我是第二步。c=',c);
+        }
+        console.log('1、开始执行...');
+        //Promise登场
+        new Promise((resolve, reject) => {
+            console.log('2、进来了...');
+            setTimeout(function () {
+                try {
+                    callback();
+                    resolve("success");
+                }catch (e) {
+                    reject(e);
+                }
+            }, 1000);
+        }).then(msg=>{
+            console.log('4、执行完毕...成功：',msg);
+        }).catch(msg=>{
+            console.log('4、执行完毕...失败：',msg);
+        })
+
+        /*
+         运行结果（所期望的顺序的正确的）：
+         1、开始执行...
+         2、进来了...
+         3、希望执行到我是第二步。c= 2
+         4、执行完毕...成功： success
+           （ 如果把b改成 b=0），第四步变成：
+            4、执行完毕...失败： err
+         */
+    }
+</script>
+</body>
+</html>

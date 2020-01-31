@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>异步编程Generator—高级的异步编程</title>
+</head>
+<body>
+<script>
+    //3、异步编程，指定某函数内有异步
+    //   关键字async，其内部出现异步的地方用await发出等待信号。
+    //   这种方式的异步编程层次更清晰、简单. 异步编程推荐这样的方式。
+    /**
+     * 这个方法内部有异步执行代码
+     * @returns {Promise<*>}
+     */
+    async function testAsync() {
+        //1、第一段=》执行这完毕后，才能执行下一段
+        await new Promise(resolve => {
+            setTimeout(function () {
+                console.log("异步方法内逻辑11111....");
+                resolve("success");
+            }, 1000);
+        });
+        //2、第二段=》执行这完毕后，才能执行下一段
+        await new Promise((resolve => {
+            setTimeout(function () {
+                console.log("异步方法内逻辑22222....");
+                resolve("success");
+            }, 500);
+        }));
+        //3、第三段=》执行这完毕后，才能执行下一段
+        console.log("外部逻辑的执行333333。。。。");
+    }
+    //像普通函数一样直接调用即可。
+    testAsync();
+</script>
+</body>
+</html>

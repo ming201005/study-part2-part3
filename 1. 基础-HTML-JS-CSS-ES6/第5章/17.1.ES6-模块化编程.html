@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ES6语法和新特性——模块化编程</title>
+    <script type="module">
+        import {CFG_INFO, myfun} from "./model/comm.js";
+        import User from "./model/userClass.js";
+
+        function useModel() {
+            //1、调用普通的变量
+            console.log("CFG_INFO==>", CFG_INFO);
+            //2、调用方法
+            myfun();
+
+            console.log('.......也可以把信息绑定到页面元素上.......');
+            //3、调用类
+            let user = new User();
+            let app = document.getElementById("app");
+            app.children[0].innerHTML = CFG_INFO;
+            app.children[1].innerHTML = user.info();
+        }
+
+        useModel();
+
+        console.log('.......import 所有可以用 * as 别名.......');
+        //comm.js下暴露了两个功能
+        import * as base from "./model/comm.js";
+
+        //调用时，用base作为前缀即可。
+        console.log('info==>>', base.CFG_INFO);
+        base.myfun();
+
+        console.log('.......import 单个（多个用逗号分开）.......');
+        //其实comm下有3个功能，这时只需要userName
+        import {CFG_GLO_STGR} from "./model/comm.js";
+
+        console.log(CFG_GLO_STGR);
+
+    </script>
+    <style>
+        .content {
+            border-style: dashed;
+            border-color: blue;
+            border-width: thick;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <div class="title"></div>
+    <div class="content">
+    </div>
+</div>
+</body>
+</html>

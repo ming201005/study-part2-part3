@@ -3,7 +3,6 @@
  * 第三个参数作为函数传入
  */
 function myfun01(userName,type,funCall) {
-    //todo
     var mData = null;
     if(type===1) {
         //到数据库查xxx钱

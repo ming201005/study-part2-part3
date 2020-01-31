@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>异步编程Generator—状态控制顺序</title>
+</head>
+<body>
+<script>
+    //1、声明一个最简单的函数（带*）
+    function* fun() {
+        console.log("test Gennrator");
+    }
+    //调用时，必须调用next()方法
+    fun().next();
+
+    //2、声明一个带（*）函数，其内部分段执行
+    //   用关键字yield使每一个yield之间停顿。
+    function* testNext() {
+
+        yield console.log("执行完毕第1段");
+        yield console.log("执行完毕第2段");
+        yield console.log("执行完毕第3段");
+
+        return;
+    }
+    //调用。
+    let n = testNext();
+    n.next();
+    n.next();
+    n.next();
+    n.next();
+</script>
+</body>
+</html>

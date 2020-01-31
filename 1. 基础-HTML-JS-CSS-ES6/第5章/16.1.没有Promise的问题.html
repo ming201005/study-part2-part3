@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>没有Promise的问题</title>
+</head>
+<body>
+<script>
+    //问题1：希望是顺序执行的，但是。。。。。后者先执行了。
+    {
+        function callback() {
+            let a = 10;
+            let b = 5;
+            if (b==null || b==0) throw  "b不能等于0或null。";
+            let   c = a/b;
+            console.log('2、【没有Promise】希望执行到我是第二步。c=',c);
+        }
+        console.log('1、【没有Promise】开始执行...');
+        // 1秒钟后调用callback函数
+        setTimeout(callback, 1000);
+        console.log('3、【没有Promise】我希望在setTimeOut之后执行。');
+        /*
+         运行结果（所期望的顺序不对）：
+         1、【没有Promise】开始执行...
+         3、【没有Promise】我希望在setTimeOut之后执行。
+         2、【没有Promise】希望执行到我是第二步。c= 2
+         */
+    }
+</script>
+</body>
+</html>

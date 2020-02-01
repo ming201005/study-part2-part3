@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数据绑定—事件处理（内联处理器）</title>
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <!--简写-->
+    <input type="button" @click="btnClickParams('我是一只来自北方的狼！')"
+           value="点我一下"/>
+</div>
+<script>
+    let vue = new Vue({
+        el: "#app",
+
+        methods: {
+            btnClickParams(msg) {
+                console.log(msg);
+            }
+        }
+    });
+</script>
+</body>
+</html>

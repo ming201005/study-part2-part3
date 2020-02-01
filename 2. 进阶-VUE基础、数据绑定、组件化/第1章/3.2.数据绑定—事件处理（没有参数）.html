@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数据绑定—事件处理（没有参数）</title>
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <!--简写-->
+    <input type="button" @click="btnClick" value="简写绑定按钮"/>
+</div>
+<script>
+    let vue = new Vue({
+        el: "#app",
+        methods: {
+            btnClick() {
+                console.log("你点中了我。");
+            }
+        }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数据绑定—事件处理（$event参数）</title>
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <input type="button"
+           @click="btnClickParamsAndEvent('按钮被点击！',$event)"
+           value="接收参数和$event参数"/>
+</div>
+<script>
+    let vue = new Vue({
+        el: "#app",
+        methods: {
+            btnClickParamsAndEvent(msg,event) {
+                console.log(msg,event);
+                //可以通过event改变DOM的相关值
+                event.target.value = "按钮"
+                event.target.style.backgroundColor = "blue";
+                event.target.style.fontSize = "20px";
+                event.target.style.color = "#FFFFFF";
+            }
+        }
+    });
+</script>
+</body>
+</html>

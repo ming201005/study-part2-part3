@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数据绑定—事件绑定v-on（简写@）</title>
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <h3>v-on:</h3>
+    <input type="button" v-on:click="btnClick" value="点我一下"/>
+    <HR>
+    <h3>简写@</h3>
+    <input type="button" @click="btnClick"  value="点我一下"/>
+</div>
+<script>
+    let vue = new Vue({
+        el: "#app",
+        data: {
+            msg: "消息"
+        },
+        methods: {
+            btnClick() {
+                console.log(this.msg);
+            }
+        }
+    });
+</script>
+</body>
+</html>

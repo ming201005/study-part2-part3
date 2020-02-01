@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数据绑定—列表渲染v-for key</title>
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <H3>key关键字的使用(遍历对象)：</H3>
+    <hr>
+    <div :key="item.id" v-for="item in userList">
+        <input type="checkbox">{{item.id}}-{{item.name}}-{{item.age}}
+    </div>
+    <div>
+        <input style="width: 30px;"  type="text"   v-model="user.id">
+        <input style="width: 100px;" type="text"   v-model="user.name">
+        <input style="width: 50px;"  type="number" v-model="user.age">
+        <input @click="addUser" type="button" value="添加">
+    </div>
+
+    <h3>遍历数组，用key关键字</h3>
+    <hr>
+    <p :key="value" v-for="(value,index) in arrList">
+        <input type="checkbox">{{index}}-{{value}} <input @click="delFruit(index)" type="button" value="删掉">
+    </p>
+    <div>
+        <input style="width: 60px;" type="text" v-model="fruit">
+        <input @click="addFruit" type="button" value="添加">
+    </div>
+</div>
+<script>
+    let vue = new Vue({
+        el: "#app",
+        data: {
+            user: {},
+            fruit:"",
+            userList: [
+                {id: 1, name: '张三', age: 18},
+                {id: 2, name: '李四', age: 23},
+                {id: 3, name: '王五', age: 28},
+                {id: 4, name: '老六', age: 31},
+                {id: 5, name: '老七', age: 19},
+            ],
+            arrList: ["苹果", "香蕉", "火龙果"]
+        },
+        methods: {
+            addUser() {
+                try {
+                    this.userList.unshift(this.user);
+                } catch (e) {
+                    console.log(e);
+                }
+            },
+            addFruit() {
+                try {
+                    this.arrList.unshift(this.fruit);
+                } catch (e) {
+                    console.log(e);
+                }
+            },
+            delFruit(index) {
+                this.arrList.splice(index,1);
+            }
+        }
+    });
+</script>
+</body>
+</html>

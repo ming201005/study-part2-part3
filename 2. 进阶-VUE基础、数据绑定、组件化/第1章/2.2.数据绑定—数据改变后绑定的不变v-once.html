@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-once绑定数据</title>
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <span v-once>v-once绑定数据，无法改变：{{msg}}</span>
+    <hr>
+    <span>没有v-once绑定数据，可以改变：{{msg}}</span>
+</div>
+<script>
+    let vue = new Vue({
+        el: "#app",
+        data: {
+            msg: "这是vue绑定的数据。"
+        }
+    });
+</script>
+</body>
+</html>

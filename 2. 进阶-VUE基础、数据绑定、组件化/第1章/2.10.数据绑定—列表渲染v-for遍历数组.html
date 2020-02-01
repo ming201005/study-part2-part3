@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数据绑定—列表渲染v-for遍历数组</title>
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <h3>只遍历值：</h3>
+    <li v-for="item in list">{{item}}</li>
+    <h3>遍历索引和值，注意格式是：（值,索引) in 数组：</h3>
+    <hr>
+    <!--item、index都写-->
+    <li v-for="(item,index) in list">
+        index={{index}}，item={{item}}
+    </li>
+</div>
+<script>
+    let vue = new Vue({
+        el: "#app",
+        data: {
+            list: ["苹果", "香蕉", "梨"]
+        }
+    });
+</script>
+</body>
+</html>

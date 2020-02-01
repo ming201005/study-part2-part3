@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数据绑定—列表渲染v-for遍历对象</title>
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <H3>简单遍历：</H3>
+    <hr>
+    <div v-for="value in User">{{value}}</div>
+
+    <H3>value、key都遍历：</H3>
+    <hr>
+    <div v-for="(value,key) in User">{{key}}:{{value}}</div>
+
+    <H3>value、key、index都遍历：</H3>
+    <hr>
+    <div v-for="(value,key,index) in User">
+        【{{index}}】{{key}}:{{value}}
+    </div>
+</div>
+<script>
+    let vue = new Vue({
+        el: "#app",
+        data: {
+            User:{
+                id : 1,
+                name :'张三',
+                age : 20
+            }
+        }
+    });
+</script>
+</body>
+</html>

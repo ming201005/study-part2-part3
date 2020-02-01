@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数据绑定—属性绑定v-bind（简写:）</title>
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+<style>
+    .red{color: red;}
+    .blue{color: blue;}
+</style>
+<div id="app">
+    <div v-bind:id="id">用户ID:{{id}}</div>
+    <!--也可以写成如下-->
+    <!--<div :id="id">用户ID</div>-->
+    <hr>
+    <div :class="redStyle">样式效果：红</div>
+    <!--同等于-->
+    <div v-bind:class="blueStyle">样式效果：蓝</div>
+</div>
+<script>
+    let vue = new Vue({
+        el: "#app",
+        data: {
+            id:"userID",
+            redStyle:"red",
+            blueStyle:"blue"
+        }
+    });
+</script>
+</body>
+</html>

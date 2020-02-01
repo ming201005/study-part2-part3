@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <span>{{msg}}{{price | RMPPrice}}</span>
+</div>
+<script>
+    //花括号内是VUE实例的参数(不常用的不写)
+    //过滤器定义的地方
+    Vue.filter("RMPPrice",value => {
+        value = value.toFixed(2);
+        return value+"元";
+    });
+
+    let vue = new Vue({
+        el: "#app",
+        data: {
+            price: 5985200.65500,
+            msg: "人民币："
+        },
+        //实例创建完成，一般数据的初始化在这里
+        created() {
+            this.show();
+        },
+        // 实例挂载完成，一般访问DOM可以在这里操作
+        // 如 $ref访问属性
+        mounted(){
+            //TODO
+        },
+        //定义方法的地方
+        methods: {
+            show() {
+                console.log('这是 show 函数.')
+            }
+        },
+        //计算属性定义的地方
+        computed:{
+
+        },
+        //监听定义的地方
+        watch :{
+
+        }
+    });
+</script>
+</body>
+</html>

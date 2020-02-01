@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数据绑定—属性绑定—style属性</title>
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    style属性静态设置：
+    <div style="background-color: #5CA2FF;
+                font-size: 20px;
+                text-align: center">style样式</div>
+    <hr>
+    用VUE动态设置style属性,style格式
+    ：{属性名1(驼峰命名):‘值’,属性名2(驼峰命名):vue变量}
+    <div :style="{backgroundColor: 'red' ,
+                  fontSize: size+'px',
+                  textAlign:'center'}">style样式</div>
+</div>
+<script>
+    let vue = new Vue({
+        el: "#app",
+        data: {
+            size  : 30,
+            //color : 'red'
+        }
+    });
+</script>
+</body>
+</html>

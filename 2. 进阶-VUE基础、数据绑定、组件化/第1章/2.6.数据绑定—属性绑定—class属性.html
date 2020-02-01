@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数据绑定—属性绑定—class属性</title>
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+<style>
+    .class1{ color: blue;  }
+    .class2{ font-size: 20px; }
+    .class3{ background-color: #d5e8d0;  }
+</style>
+<div id="app">
+    <hr>绑数组——属性有多个值的，可以绑数组:
+    <div class="class1 class2 class3">固定的样式名称</div>
+    <hr>
+    <div :class="['class1','class2','class3']">通过VUE动态的设置样式</div>
+    <hr>绑数组——给样式绑定的数组可以判断其中一个是否显示:
+    <div :class="[{'class1': action},'class2','class3']">你好，VUE。</div>
+    <hr>绑对象——还可以决定哪个样式显示(显示1，2的样式):
+    <div :class="{class1: isStyles[0], class2: isStyles[1],class3:isStyles[2]}">你好，VUE。</div>
+</div>
+<script>
+    let vue = new Vue({
+        el: "#app",
+        data: {
+            isStyles:[true,true,false],
+            action:false
+        }
+    });
+</script>
+</body>
+</html>

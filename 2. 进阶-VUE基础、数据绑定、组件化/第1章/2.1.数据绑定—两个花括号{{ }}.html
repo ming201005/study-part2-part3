@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数据绑定—两个花括号{{ }}</title>
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <div>普通信息：{{msg}}</div>
+    <hr>
+    <div>水果：{{arr}}</div>
+    <div>水果1：{{arr[0]}}</div>
+    <div>水果2：{{arr[1]}}</div>
+    <div>水果3：{{arr[2]}}</div>
+    <hr>
+    <div>用户：{{user}}</div>
+    <div>编号：{{user.id}}</div>
+    <div>姓名：{{user.name}}</div>
+</div>
+<script>
+    new Vue({
+        el:"#app",
+        data:{
+            //普通消息
+            msg:"普通信息",
+            //数组
+            arr:["苹果","梨","芒果"],
+            //对象
+            user:{
+                id:1,
+                name:"张三",
+                age:23
+            }
+        }
+    });
+</script>
+</body>
+</html>

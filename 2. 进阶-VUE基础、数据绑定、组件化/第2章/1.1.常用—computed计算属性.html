@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>常用—computed计算属性</title>
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <li style="margin: 5px 3px;
+                   background-color: #5CA2FF;
+                   color: white;"
+        v-for="item in fruitsArr" :key="item">
+        {{item}}
+    </li>
+</div>
+<script>
+    let vue = new Vue({
+        el: "#app",
+        data: {
+            fruits: "苹果,香蕉,火龙果,哈密瓜,西红柿"
+        },
+        computed: {
+            fruitsArr() {
+                return this.fruits.split(",");
+            }
+        }
+    });
+</script>
+</body>
+</html>

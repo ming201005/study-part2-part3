@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>常用—计算属性和方法实现对比</title>
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <input v-model="str" >
+    <button @click="btnClick">点击</button>
+    <HR>
+    计算属性： {{idArr}}
+    <HR>
+    方法实现：{{getArr()}}
+</div>
+<script>
+    let vue = new Vue({
+        el: "#app",
+        data: {
+            ids : "",
+            str : ""
+        },
+        methods:{
+            getArr(){
+                console.log("用方法：转换成数组");
+                return  this.ids.split(",");
+            },
+            btnClick(){
+                console.log("btnClick……");
+                this.ids = this.str;
+            }
+        },
+        computed:{
+            idArr() {
+                console.log("用计算属性：转换成数组");
+                return  this.ids.split(",");
+            }
+        }
+    });
+</script>
+</body>
+</html>

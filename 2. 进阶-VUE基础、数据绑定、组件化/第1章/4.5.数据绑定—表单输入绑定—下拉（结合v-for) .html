@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数据绑定—表单输入绑定—下拉（结合v-for) </title>
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <label>请选择一个省份：</label>
+    <select v-model="province">
+        <option value="0" selected>--请选择--</option>
+        <option v-for="item in provinceList"
+                :value="item.id" :key="item.id">{{item.name}}</option>
+    </select>
+</div>
+<script>
+    let vue = new Vue({
+        el: "#app",
+        data: {
+            province : 0,
+            provinceList:[
+                {
+                    id:1,
+                    name :"广东"
+                },
+                {
+                    id:2,
+                    name :"广西"
+                },
+                {
+                    id:3,
+                    name :"山东"
+                },
+                {
+                    id:4,
+                    name :"辽宁"
+                },
+                {
+                    id:5,
+                    name :"河北"
+                }
+            ]
+        }
+    });
+</script>
+</body>
+</html>

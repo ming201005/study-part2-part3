@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数据绑定—事件修饰</title>
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+<style>
+    .class1{
+        width: 300px;
+        height: 100px;
+        background-color: #D8E1FF;
+    }
+    .class2{
+        width: 200px;
+        height: 50px;
+        background-color: #5CA2FF;
+    }
+</style>
+<div id="app">
+    <h3>(1)阻止单击事件继续传播，解决事件冒泡:stop</h3>
+    <!-- 阻止单击事件继续传播，解决事件冒泡 -->
+　　<div class="class1" @click.stop="doThis">
+　　　　<div class="class2" @click.stop="doThis">
+　　　　　　<button @click.stop="doThis">点我一下</button>
+　　　　</div>
+　　</div>
+    <h3>(2)点击事件将只会触发一次:once</h3>
+    <!-- 点击事件将只会触发一次 -->
+    <button  @click.once="doThis">点击事件将只会触发一次</button>
+
+    <h3>(3)提交事件不再重载页面:submit.prevent</h3>
+    <!-- 提交事件不再重载页面 ，去掉prevent尝试一下，页面会重新加载-->
+    <form class="class1"  @submit.prevent="onSubmit">
+        <label for="keyword">输入关键字：</label><input type="text" id="keyword" value="">
+        <input type="submit" value="提交事件不再重载页面"/>
+    </form>
+
+    <h3>(4)修饰符可以串联:.stop.prevent</h3>
+    <!-- 修饰符可以串联 -->
+    <button  @click.stop.prevent="doThat">修饰符可以串联</button>
+
+    <h3>(5)只有修饰符:submit.prevent </h3>
+    <!-- 只有修饰符 -->
+    <form  @submit.prevent>
+        <input type="submit" value="只有修饰符"/>
+    </form>
+
+    <h3>(6)添加事件监听器时使用事件捕获模式 </h3>
+    <!-- 添加事件监听器时使用事件捕获模式 -->
+    <!-- 即内部元素触发的事件先在此处理，然后才交由内部元素进行处理 -->
+    <div class="class1" @click="docapture1">
+　　　　<div class="class2" @click.capture="docapture2">
+　　　　　　<button @click.capture="docapture3">点击我一下</button>
+　　　　</div>
+　　</div>
+
+    <h3>(7)只当在 event.target 是当前元素自身时触发处理函数 </h3>
+    <!-- 只当在 event.target 是当前元素自身时触发处理函数 -->
+    <!-- 即事件不是从内部元素触发的 -->
+    <div class="class1" @click.self="doThat">
+        <button @click.self="doThis">点击我一下</button>
+    </div>
+
+    <h3>(8)滚动事件的默认行为 (即滚动行为) 将会立即触发 </h3>
+    <!-- 滚动事件的默认行为 (即滚动行为) 将会立即触发 -->
+    <!-- 而不会等待 `onScroll` 完成 -->
+    <!-- 这其中包含 `event.preventDefault()` 的情况 -->
+    <div class="class1"  @scroll.passive="onScroll"></div>
+
+</div>
+<script>
+    let vue = new Vue({
+        el: "#app",
+        data: {
+            msg: "这是vue绑定的数据。"
+        },
+        methods:{
+            doThis(){
+                console.log("doThis……");
+            },
+            doThat(){
+                console.log("doThat……");
+            },
+            docapture1(){
+                console.log("capture1111");
+            },
+            docapture2(){
+                console.log("capture2222");
+            },
+            docapture3(){
+                console.log("capture3333");
+            },
+            onSubmit() {
+                console.log("onSubmit……");
+            }
+        }
+    });
+</script>
+
+</body>
+</html>

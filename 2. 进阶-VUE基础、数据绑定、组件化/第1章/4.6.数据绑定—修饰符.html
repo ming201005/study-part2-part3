@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数据绑定—修饰符</title>
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <H3>光标移开再改变v-model.lazy</H3>
+    <div>
+        <label for="userName1">用户名称(没lazy)：</label>
+        <input v-model="userName" id="userName1">
+    </div>
+    <div>
+        <label for="userName2">用户名称(有lazy)：</label>
+        <input v-model.lazy="userName" id="userName2">
+    </div>
+    <div>{{userName}}</div>
+
+    <H3>限制数字类型v-model.number</H3>
+    <input v-model.number="age" type="number">
+
+    <H3>过滤字符串两头空白v-model.trim</H3>
+    <input v-model.trim="msg">
+</div>
+<script>
+    let vue = new Vue({
+        el: "#app",
+        data: {
+            userName:"",
+            age:0,
+            msg:""
+        }
+    });
+</script>
+</body>
+</html>

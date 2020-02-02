@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数据绑定—表单输入绑定—复选框v-model</title>
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <div>
+        <label>选择喜欢吃的水果：</label>
+        <input type="checkbox" v-model="fruits"
+               id="apple" value="苹果">
+        <label for="apple">苹果</label>
+
+        <input type="checkbox" v-model="fruits"
+               id="banana" value="香蕉">
+        <label for="banana">香蕉</label>
+
+        <input type="checkbox" v-model="fruits"
+               id="pear" value="梨子">
+        <label for="pear">梨子</label>
+    </div>
+</div>
+<script>
+    let vue = new Vue({
+        el: "#app",
+        data: {
+            fruits   :[]
+        }
+    });
+</script>
+</body>
+</html>

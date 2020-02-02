@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数据绑定—键盘监听-修饰</title>
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <h3>键盘监听</h3>
+    <!-- 只有在 `key` 是 `Enter` 时调用 `vm.submit()` -->
+    <input @keyup.enter="doThis">
+    使用 keyCode 特性也是允许的：
+    <input @keyup.13="doThis">
+    <!-- Alt + C -->
+    <input @keyup.alt.67="doThis">
+
+    <HR>
+    <h3>修饰</h3>
+    <!-- 即使 Ctrl 或 Shift 被一同按下时也会触发 -->
+    <button @click.ctrl="doThis">Ctrl 或 Shift 被一同按下时也会触发</button>
+
+    <!-- 有且只有 Ctrl 被按下的时候才触发 -->
+    <button @click.ctrl.exact="doThis">有且只有 Ctrl 被按下的时候才触发 </button>
+
+    <!-- 没有任何系统修饰符被按下的时候才触发 -->
+    <button @click.exact="doThis">没有任何系统修饰符被按下的时候才触发</button>
+</div>
+<script>
+    let vue = new Vue({
+        el: "#app",
+        data: {
+            msg: "这是vue绑定的数据。"
+        },
+        methods:{
+            doThis(){
+                console.log("doThis……");
+            }
+        }
+    });
+</script>
+</body>
+</html>

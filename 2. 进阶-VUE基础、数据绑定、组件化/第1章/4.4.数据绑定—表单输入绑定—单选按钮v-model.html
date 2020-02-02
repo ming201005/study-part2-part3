@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数据绑定—表单输入绑定—单选按钮v-model</title>
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <label>选择喜欢的球类：</label>
+    <input type="radio" v-model="balls" id="footBall" value="足球">
+    <label for="footBall">足球</label>
+    <input type="radio" v-model="balls" id="basketBall" value="篮球">
+    <label for="basketBall">篮球</label>
+    <input type="radio" v-model="balls" id="pingpongBall" value="乒乓球">
+    <label for="pingpongBall">乒乓球</label>
+</div>
+<script>
+    let vue = new Vue({
+        el: "#app",
+        data: {
+            balls    : ""
+        }
+    });
+</script>
+</body>
+</html>

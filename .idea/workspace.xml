@@ -2,22 +2,42 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a18dbc87-d1d9-428e-bea8-4599335912ec" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/2. 进阶-VUE基础、数据绑定、组件化/第1章/1.4.第一个VUE示例.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2. 进阶-VUE基础、数据绑定、组件化/第1章/1.6.VUE实例参数完整写法.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2. 进阶-VUE基础、数据绑定、组件化/第1章/2.1.数据绑定—两个花括号{{ }}.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2. 进阶-VUE基础、数据绑定、组件化/第1章/2.10.数据绑定—列表渲染v-for遍历数组.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2. 进阶-VUE基础、数据绑定、组件化/第1章/2.11.数据绑定—列表渲染v-for遍历对象.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2. 进阶-VUE基础、数据绑定、组件化/第1章/2.12.数据绑定—列表渲染v-for key.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2. 进阶-VUE基础、数据绑定、组件化/第1章/2.13.数据绑定—列表渲染v-for中is属性设置.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2. 进阶-VUE基础、数据绑定、组件化/第1章/2.2.数据绑定—数据改变后绑定的不变v-once.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2. 进阶-VUE基础、数据绑定、组件化/第1章/2.3.数据绑定—表达式.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2. 进阶-VUE基础、数据绑定、组件化/第1章/2.4.数据绑定—原始输出v-html.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2. 进阶-VUE基础、数据绑定、组件化/第1章/2.5.数据绑定—属性绑定v-bind(简写冒号).html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2. 进阶-VUE基础、数据绑定、组件化/第1章/2.6.数据绑定—属性绑定—class属性.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2. 进阶-VUE基础、数据绑定、组件化/第1章/2.7.数据绑定—属性绑定—style属性.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2. 进阶-VUE基础、数据绑定、组件化/第1章/2.8.数据绑定—条件渲染v-if、v-else-if、v-else.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2. 进阶-VUE基础、数据绑定、组件化/第1章/2.9.数据绑定—条件渲染v-show.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1. 基础-HTML-JS-CSS-ES6/view-废弃/ES6-对象、类、继承.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1. 基础-HTML-JS-CSS-ES6/view-废弃/ES6-异步编程Generator.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1. 基础-HTML-JS-CSS-ES6/view-废弃/ES6-异步编程Promise.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1. 基础-HTML-JS-CSS-ES6/view-废弃/ES6.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1. 基础-HTML-JS-CSS-ES6/view-废弃/ajax.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1. 基础-HTML-JS-CSS-ES6/view-废弃/dom-节点操作.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1. 基础-HTML-JS-CSS-ES6/view-废弃/getData.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1. 基础-HTML-JS-CSS-ES6/view-废弃/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1. 基础-HTML-JS-CSS-ES6/view-废弃/index1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1. 基础-HTML-JS-CSS-ES6/view-废弃/index10.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1. 基础-HTML-JS-CSS-ES6/view-废弃/index11.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1. 基础-HTML-JS-CSS-ES6/view-废弃/index2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1. 基础-HTML-JS-CSS-ES6/view-废弃/index3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1. 基础-HTML-JS-CSS-ES6/view-废弃/index4.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1. 基础-HTML-JS-CSS-ES6/view-废弃/index5.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1. 基础-HTML-JS-CSS-ES6/view-废弃/index6.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1. 基础-HTML-JS-CSS-ES6/view-废弃/index7.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1. 基础-HTML-JS-CSS-ES6/view-废弃/index8.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1. 基础-HTML-JS-CSS-ES6/view-废弃/index9.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1. 基础-HTML-JS-CSS-ES6/view-废弃/js-函数.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1. 基础-HTML-JS-CSS-ES6/view-废弃/js-变量.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1. 基础-HTML-JS-CSS-ES6/view-废弃/js-控制语句.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1. 基础-HTML-JS-CSS-ES6/view-废弃/js-面向对象.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1. 基础-HTML-JS-CSS-ES6/view-废弃/js/Member.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1. 基础-HTML-JS-CSS-ES6/view-废弃/js/Product.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1. 基础-HTML-JS-CSS-ES6/view-废弃/js/ajax.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1. 基础-HTML-JS-CSS-ES6/view-废弃/js/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1. 基础-HTML-JS-CSS-ES6/view-废弃/js/myobject.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1. 基础-HTML-JS-CSS-ES6/view-废弃/js/person.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1. 基础-HTML-JS-CSS-ES6/view-废弃/js/person01.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1. 基础-HTML-JS-CSS-ES6/view-废弃/model/js/comm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1. 基础-HTML-JS-CSS-ES6/view-废弃/model/js/userClass.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1. 基础-HTML-JS-CSS-ES6/view-废弃/template.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1. 基础-HTML-JS-CSS-ES6/view-废弃/test.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1. 基础-HTML-JS-CSS-ES6/view-废弃/test1.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,17 +91,17 @@
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\IntelliJ IDEA 2019.3.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\教程\源代码\study-part2-part3\2. 进阶-VUE基础、数据绑定、组件化\第1章" />
-      <recent name="D:\教程\源代码\study-part2-part3\1. 基础-HTML-JS-CSS-ES6\第5章" />
-      <recent name="D:\教程\源代码\study-part2-part3\1. 基础-HTML-JS-CSS-ES6\第5章\class" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\教程\源代码\study-part2-part3\2. 进阶-VUE基础、数据绑定、组件化\第1章" />
       <recent name="D:\教程\源代码\study-part2-part3\1. 基础-HTML-JS-CSS-ES6\第5章" />
       <recent name="D:\教程\源代码\study-part2-part3\1. 基础-HTML-JS-CSS-ES6\第4章\class" />
       <recent name="D:\教程\源代码\study-part2-part3\1. 基础-HTML-JS-CSS-ES6\第4章" />
       <recent name="D:\教程\源代码\study-part2-part3\1. 基础-HTML-JS-CSS-ES6\第3章" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\教程\源代码\study-part2-part3\2. 进阶-VUE基础、数据绑定、组件化\第1章" />
+      <recent name="D:\教程\源代码\study-part2-part3\1. 基础-HTML-JS-CSS-ES6\第5章" />
+      <recent name="D:\教程\源代码\study-part2-part3\1. 基础-HTML-JS-CSS-ES6\第5章\class" />
     </key>
   </component>
   <component name="ServiceViewManager">
@@ -123,7 +143,8 @@
       <workItem from="1580318488013" duration="183000" />
       <workItem from="1580357351952" duration="24492000" />
       <workItem from="1580460114239" duration="8315000" />
-      <workItem from="1580530570335" duration="13861000" />
+      <workItem from="1580530570335" duration="18723000" />
+      <workItem from="1580631026188" duration="10620000" />
     </task>
     <task id="LOCAL-00001" summary="组件化示例">
       <created>1578376794459</created>
@@ -188,7 +209,28 @@
       <option name="project" value="LOCAL" />
       <updated>1580471557729</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="VUE数据绑定-书本和源代码一一对应">
+      <created>1580545741457</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1580545741458</updated>
+    </task>
+    <task id="LOCAL-00011" summary="事件绑定">
+      <created>1580572339552</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1580572339552</updated>
+    </task>
+    <task id="LOCAL-00012" summary="事件监听、表单输入绑定">
+      <created>1580649638608</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1580649638608</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -201,7 +243,10 @@
     <MESSAGE value="箭头函数" />
     <MESSAGE value="数组，set，map，es6继承" />
     <MESSAGE value="异步编程、模块化编程" />
-    <option name="LAST_COMMIT_MESSAGE" value="异步编程、模块化编程" />
+    <MESSAGE value="VUE数据绑定-书本和源代码一一对应" />
+    <MESSAGE value="事件绑定" />
+    <MESSAGE value="事件监听、表单输入绑定" />
+    <option name="LAST_COMMIT_MESSAGE" value="事件监听、表单输入绑定" />
   </component>
   <component name="WindowStateProjectService">
     <state x="432" y="165" key="#Inspections" timestamp="1579946447294">
@@ -216,10 +261,10 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="531" y="406" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1680.1010@0.0.1680.1010" timestamp="1580534028076" />
-    <state x="648" y="103" key="CommitChangelistDialog2" timestamp="1580545670286">
+    <state x="648" y="103" key="CommitChangelistDialog2" timestamp="1580649636958">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state x="648" y="103" key="CommitChangelistDialog2/0.0.1680.1010@0.0.1680.1010" timestamp="1580545670286" />
+    <state x="648" y="103" key="CommitChangelistDialog2/0.0.1680.1010@0.0.1680.1010" timestamp="1580649636958" />
     <state x="92" y="92" width="1496" height="826" key="DiffContextDialog" timestamp="1578376513093">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
@@ -236,10 +281,10 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="344" y="230" key="SettingsEditor/0.0.1680.1010@0.0.1680.1010" timestamp="1580534276905" />
-    <state x="432" y="240" key="Vcs.Push.Dialog.v2" timestamp="1580471748730">
+    <state x="432" y="240" key="Vcs.Push.Dialog.v2" timestamp="1580649649892">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state x="432" y="240" key="Vcs.Push.Dialog.v2/0.0.1680.1010@0.0.1680.1010" timestamp="1580471748730" />
+    <state x="432" y="240" key="Vcs.Push.Dialog.v2/0.0.1680.1010@0.0.1680.1010" timestamp="1580649649892" />
     <state x="532" y="331" key="com.intellij.ide.util.TipDialog" timestamp="1580357354017">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>

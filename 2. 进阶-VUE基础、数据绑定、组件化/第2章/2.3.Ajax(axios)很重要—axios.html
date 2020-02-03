@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax(axios)很重要—axios</title>
+    <script src="../js/vue.js"></script>
+    <script src="../js/axios.min.js"></script>
+</head>
+<body>
+<style>
+    table {
+        width: 100%;
+        margin:10px 0;
+        border-radius: 8px 8px 0 0;
+        border-collapse: collapse;
+        border: #004BFF  solid 1px;
+    }
+    table .h> tr,td{
+        text-align: center;
+        border: #004BFF  solid 1px;
+        padding: 5px;
+        background-color: #5CA2FF;
+        color: #FFFFFF;
+        font-size: 15px;
+        font-weight: bold;
+    }
+    table .box:nth-child(even) td {
+        background-color: white;
+        text-align: left;
+        color: #000000;
+        font-weight: normal;
+    } table .box:nth-child(odd) td {
+        background-color: #D8E1FF;
+        text-align: left;
+        color: #000000;
+        font-weight: normal;
+      }
+</style>
+    <div id="app">
+        <button @click="getData">加载数据</button>
+        <div v-if="!loading">正在加载数据……</div>
+        <table v-if="loading">
+           <!-- 表头 -->
+            <tr class="h">
+                <td>id</td>
+                <td>username</td>
+                <td>email</td>
+                <td>address</td>
+                <td>phone</td>
+                <td>company</td>
+            </tr>
+            <!-- 内容，需要循环显示 -->
+            <tr class="box" v-for="(item,index) in users">
+                <td>{{item.id}}</td>
+                <td>{{item.username}}</td>
+                <td>{{item.email}}</td>
+                <td>{{item.address.city}}</td>
+                <td>{{item.phone}}</td>
+                <td>{{item.company.name}}</td>
+            </tr>
+
+        </table>
+    </div>
+<script>
+    let vue = new Vue({
+        el: "#app",
+        data: {
+            loading:false,
+            msg: "消息",
+            apiURL : "http://jsonplaceholder.typicode.com/users",
+            users:[]
+        },
+        created() {
+            this.getData();
+        },
+        methods: {
+            /**
+             * get获取远程数据
+             */
+            getData() {
+                //让加载进度条显示
+                this.loading = false;
+                //api地址
+                let getURL = this.apiURL;
+                //get方法请求数据
+                axios.get(getURL).then(
+                    rs=>{
+                        if(rs.status == 200){
+                            this.users = rs.data;
+                            this.loading = true;
+                        }
+                        //console.log(this.users);
+                    }
+                ).catch(err=>{
+                    console.log(err);
+                });
+            },
+
+            /**
+             * 保存数据
+             * @returns {Promise<void>}
+             */
+            async postData()
+            {
+                let postURL = this.apiURL+"/user";
+                let data = {
+                    //...
+                };
+                //保存数据
+                await axios.post(postURL,data).then(
+                    rs=>{
+                        console.log(rs);
+                    }
+                ).catch(err=>{
+                    console.log(err);
+                });
+                //重新加载数据
+                await this.getData();
+                //打印结果
+                // console.log(this.users);
+            },
+
+            /**
+             * 编辑数据
+             * @returns {Promise<void>}
+             */
+            async putData() {
+                let url = this.apiURL+"/user";
+                let data = {
+                    //...
+                }
+                await axios.put(url,data).then(rs=>{
+                    console.log(rs);
+                }).catch(err=>{
+                    console.log(err);
+                })
+                //重新加载数据
+                await this.getData();
+            },
+
+            /**
+             * 删除数据
+             * @returns {Promise<void>}
+             */
+            async delData() {
+                let url = this.apiURL+"/user?ids=1,2";
+
+                await axios.delete(url).then(rs=>{
+                    console.log(rs);
+                }).catch(err=>{
+                    console.log(err);
+                })
+                //重新加载数据
+                await this.getData();
+            },
+
+            //并发请求
+            doAll() {
+                //并发请求,数组参数。
+                axios.all([this.getData(), this.getData(),this.getData()])
+                    .then(rs=>{
+                        console.log(rs);
+                }).catch(err=>{
+                    console.log(err);
+                });
+            }
+        }
+    });
+</script>
+</body>
+</html>

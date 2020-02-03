@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax(axios)很重要—拦截器</title>
+    <script src="../js/vue.js"></script>
+    <script src="../js/axios.min.js"></script>
+</head>
+<body>
+<div id="app">
+</div>
+<script>
+    //create创建一个新的实例对象
+    let myAxios = axios.create({
+        baseURL: 'http://jsonplaceholder.typicode.com/users',
+        imeout: 3000
+    });
+    //http request 封装请求头拦截器
+    myAxios.interceptors.request.use(
+        config => {
+            console.log("http request 封装请求头拦截器");
+            let token = getCookie('Idea-a373f207');
+
+            config.data = JSON.stringify(config.data);
+
+            config.headers = {
+                'Content-Type':'application/json'
+            }
+            if(token != ''){
+                config.headers.token = token;
+            }else{
+                console.log("还没登录。。。。")
+            }
+            return config;
+        },
+        error => {
+            console.log("错误 request error");
+            return Promise.reject(err);
+        });
+
+    //http response 封装后台返回拦截器
+    myAxios.interceptors.response.use(
+        response => {
+            console.log("http response 封装后台返回拦截器");
+
+            //这里仅仅是演示。。。真实的姓名会从后台返回未登录的消息。
+            //以下code=-2是模拟数据
+            //response.data.code = -2;
+
+            if(response.data.code == '-2'
+                || response.data.msg=="请登录"){
+                throw("还没登录。。。。。");
+                //跳转到登录页面。。。。
+                console.log("还没登录。。。。。");
+            }
+            return response;
+        },
+        error => {
+            console.log("错误 response error");
+            return Promise.reject(error)
+        });
+
+
+    /**
+     * 获取cookie
+     * @param NameOfCookie
+     * @returns {*}
+     */
+    function getCookie (NameOfCookie) {
+        var arr,reg = new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+
+        if(arr=document.cookie.match(reg))
+
+            return unescape(arr[2]);
+        else
+            return null;
+    }
+
+
+
+    //vue实例创建
+    let vue = new Vue({
+        el: "#app",
+        data: {
+
+        },
+        created() {
+            this.getData();
+        },
+        methods: {
+            //get获取远程数据
+            getData() {
+                myAxios.get("").then(
+                    rs=>{
+                        console.log(rs);
+                    }
+                ).catch(err=>{
+                    console.log("错误：=》",err);
+                });
+            },
+
+        }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>过滤器—filter</title>
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <h3>1. 定义只有一个参数的filter过滤器：</h3>
+    <div>{{msg}}{{price | RMB}}</div>
+
+    <h3>2. 定义多个参数的filter过滤器（不传第一个参数）：</h3>
+    <div>{{msg}}{{price | MyRMB(10000,"万")}}</div>
+</div>
+<script>
+    //filter过滤器
+    Vue.filter("RMB",value => {
+        value = value.toFixed(2);
+        return value+"元";
+    });
+
+    //第一个参数是要过滤的处理的数据
+    Vue.filter("MyRMB",(value,v1,v2) => {
+        console.log(value,v1,v2);
+        value = value/v1;
+        value = value.toFixed(2);
+        return value+v2;
+    });
+    let vue = new Vue({
+        el: "#app",
+        data: {
+            price: 256869.65500,
+            msg: "人民币："
+        }
+    });
+</script>
+</body>
+</html>

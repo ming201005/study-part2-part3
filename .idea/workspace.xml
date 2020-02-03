@@ -1,43 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a18dbc87-d1d9-428e-bea8-4599335912ec" name="Default Changelist" comment="">
+    <list default="true" id="a18dbc87-d1d9-428e-bea8-4599335912ec" name="Default Changelist" comment="计算属性">
+      <change afterPath="$PROJECT_DIR$/2. 进阶-VUE基础、数据绑定、组件化/第3章/7.2.组件—组件定义（局部组件[方式1]）.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2. 进阶-VUE基础、数据绑定、组件化/第3章/7.3.组件—组件定义（局部组件[方式2]）.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1. 基础-HTML-JS-CSS-ES6/view-废弃/ES6-对象、类、继承.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1. 基础-HTML-JS-CSS-ES6/view-废弃/ES6-异步编程Generator.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1. 基础-HTML-JS-CSS-ES6/view-废弃/ES6-异步编程Promise.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1. 基础-HTML-JS-CSS-ES6/view-废弃/ES6.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1. 基础-HTML-JS-CSS-ES6/view-废弃/ajax.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1. 基础-HTML-JS-CSS-ES6/view-废弃/dom-节点操作.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1. 基础-HTML-JS-CSS-ES6/view-废弃/getData.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1. 基础-HTML-JS-CSS-ES6/view-废弃/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1. 基础-HTML-JS-CSS-ES6/view-废弃/index1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1. 基础-HTML-JS-CSS-ES6/view-废弃/index10.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1. 基础-HTML-JS-CSS-ES6/view-废弃/index11.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1. 基础-HTML-JS-CSS-ES6/view-废弃/index2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1. 基础-HTML-JS-CSS-ES6/view-废弃/index3.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1. 基础-HTML-JS-CSS-ES6/view-废弃/index4.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1. 基础-HTML-JS-CSS-ES6/view-废弃/index5.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1. 基础-HTML-JS-CSS-ES6/view-废弃/index6.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1. 基础-HTML-JS-CSS-ES6/view-废弃/index7.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1. 基础-HTML-JS-CSS-ES6/view-废弃/index8.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1. 基础-HTML-JS-CSS-ES6/view-废弃/index9.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1. 基础-HTML-JS-CSS-ES6/view-废弃/js-函数.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1. 基础-HTML-JS-CSS-ES6/view-废弃/js-变量.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1. 基础-HTML-JS-CSS-ES6/view-废弃/js-控制语句.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1. 基础-HTML-JS-CSS-ES6/view-废弃/js-面向对象.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1. 基础-HTML-JS-CSS-ES6/view-废弃/js/Member.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1. 基础-HTML-JS-CSS-ES6/view-废弃/js/Product.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1. 基础-HTML-JS-CSS-ES6/view-废弃/js/ajax.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1. 基础-HTML-JS-CSS-ES6/view-废弃/js/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1. 基础-HTML-JS-CSS-ES6/view-废弃/js/myobject.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1. 基础-HTML-JS-CSS-ES6/view-废弃/js/person.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1. 基础-HTML-JS-CSS-ES6/view-废弃/js/person01.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1. 基础-HTML-JS-CSS-ES6/view-废弃/model/js/comm.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1. 基础-HTML-JS-CSS-ES6/view-废弃/model/js/userClass.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1. 基础-HTML-JS-CSS-ES6/view-废弃/template.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1. 基础-HTML-JS-CSS-ES6/view-废弃/test.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1. 基础-HTML-JS-CSS-ES6/view-废弃/test1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2. 进阶-VUE基础、数据绑定、组件化/VUE组件/01、第十章-第61节—VUE组件开发-组件定义（局部组件[方式1]）.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2. 进阶-VUE基础、数据绑定、组件化/VUE组件/02、第十章-第61节—VUE组件开发-组件定义（局部组件[方式2]）.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2. 进阶-VUE基础、数据绑定、组件化/VUE组件/03、第十章-第61节—VUE组件开发-组件定义（全局组件）.html" beforeDir="false" afterPath="$PROJECT_DIR$/2. 进阶-VUE基础、数据绑定、组件化/第3章/7.4.组件—组件定义（全局组件）.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2. 进阶-VUE基础、数据绑定、组件化/VUE组件/04、第十章-第61节—VUE组件开发-组件的使用.html" beforeDir="false" afterPath="$PROJECT_DIR$/2. 进阶-VUE基础、数据绑定、组件化/第3章/7.5.组件—组件使用.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2. 进阶-VUE基础、数据绑定、组件化/VUE组件/05、第十章-第61节—VUE组件开发-组件模板抽离.html" beforeDir="false" afterPath="$PROJECT_DIR$/2. 进阶-VUE基础、数据绑定、组件化/第3章/7.6.组件—组件模板、样式抽离.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2. 进阶-VUE基础、数据绑定、组件化/VUE组件/06、第十章-第61节—VUE组件开发-组件内数据、方法定义.html" beforeDir="false" afterPath="$PROJECT_DIR$/2. 进阶-VUE基础、数据绑定、组件化/第3章/7.7.组件—组件内的数据、方法.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2. 进阶-VUE基础、数据绑定、组件化/VUE组件/07、第十章-第61节—VUE组件开发-组件内的填充数据（官网叫插槽）.html" beforeDir="false" afterPath="$PROJECT_DIR$/2. 进阶-VUE基础、数据绑定、组件化/第3章/7.8.组件—组件内的填充数据（插槽）.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2. 进阶-VUE基础、数据绑定、组件化/VUE组件/08、第十章-第61节—VUE组件开发-父子组件关系.html" beforeDir="false" afterPath="$PROJECT_DIR$/2. 进阶-VUE基础、数据绑定、组件化/第3章/8.1.组件—父、子组件关系.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2. 进阶-VUE基础、数据绑定、组件化/VUE组件/09、第十章-第61节—VUE组件开发-父组件传值给子组件.html" beforeDir="false" afterPath="$PROJECT_DIR$/2. 进阶-VUE基础、数据绑定、组件化/第3章/8.2.组件—父组件传值给子组件.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2. 进阶-VUE基础、数据绑定、组件化/VUE组件/10、第十章-第61节—VUE组件开发-子组件传值给父组件.html" beforeDir="false" afterPath="$PROJECT_DIR$/2. 进阶-VUE基础、数据绑定、组件化/第3章/8.3.组件—子组件传值给父组件.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2. 进阶-VUE基础、数据绑定、组件化/VUE组件/11、第十章-第61节—VUE组件开发-兄弟传值.html" beforeDir="false" afterPath="$PROJECT_DIR$/2. 进阶-VUE基础、数据绑定、组件化/第3章/8.6.组件—兄弟组件传值.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2. 进阶-VUE基础、数据绑定、组件化/第2章/1.1.常用—computed计算属性.html" beforeDir="false" afterPath="$PROJECT_DIR$/2. 进阶-VUE基础、数据绑定、组件化/第2章/5.1.常用—computed计算属性.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2. 进阶-VUE基础、数据绑定、组件化/第2章/1.2.常用—计算属性和方法实现对比.html" beforeDir="false" afterPath="$PROJECT_DIR$/2. 进阶-VUE基础、数据绑定、组件化/第2章/5.2.常用—计算属性和方法实现对比.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2. 进阶-VUE基础、数据绑定、组件化/第2章/1.3.常用—watch监听.html" beforeDir="false" afterPath="$PROJECT_DIR$/2. 进阶-VUE基础、数据绑定、组件化/第2章/5.3.常用—watch监听.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2. 进阶-VUE基础、数据绑定、组件化/第2章/1.4.常用—filter过滤器.html" beforeDir="false" afterPath="$PROJECT_DIR$/2. 进阶-VUE基础、数据绑定、组件化/第2章/5.4.常用—filter过滤器.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2. 进阶-VUE基础、数据绑定、组件化/第2章/2.3.Ajax(axios)很重要—axios.html" beforeDir="false" afterPath="$PROJECT_DIR$/2. 进阶-VUE基础、数据绑定、组件化/第2章/6.3.Ajax(axios)很重要—axios.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2. 进阶-VUE基础、数据绑定、组件化/第2章/2.4.Ajax(axios)很重要—拦截器.html" beforeDir="false" afterPath="$PROJECT_DIR$/2. 进阶-VUE基础、数据绑定、组件化/第2章/6.4.Ajax(axios)很重要—拦截器.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2. 进阶-VUE基础、数据绑定、组件化/第2章/3.5 Ajax(axios)很重要-完整的配置.html" beforeDir="false" afterPath="$PROJECT_DIR$/2. 进阶-VUE基础、数据绑定、组件化/第2章/6.5 Ajax(axios)很重要-完整的配置.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +65,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/2. 进阶-VUE基础、数据绑定、组件化/第1章" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/2. 进阶-VUE基础、数据绑定、组件化/第2章" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -91,17 +76,19 @@
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\IntelliJ IDEA 2019.3.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\教程\源代码\study-part2-part3\2. 进阶-VUE基础、数据绑定、组件化\第3章" />
+      <recent name="D:\教程\源代码\study-part2-part3\2. 进阶-VUE基础、数据绑定、组件化\js" />
+      <recent name="D:\教程\源代码\study-part2-part3\2. 进阶-VUE基础、数据绑定、组件化\第2章\axios" />
+      <recent name="D:\教程\源代码\study-part2-part3\2. 进阶-VUE基础、数据绑定、组件化\第1章" />
+      <recent name="D:\教程\源代码\study-part2-part3\1. 基础-HTML-JS-CSS-ES6\第5章" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\教程\源代码\study-part2-part3\2. 进阶-VUE基础、数据绑定、组件化\第2章" />
       <recent name="D:\教程\源代码\study-part2-part3\2. 进阶-VUE基础、数据绑定、组件化\第1章" />
       <recent name="D:\教程\源代码\study-part2-part3\1. 基础-HTML-JS-CSS-ES6\第5章" />
       <recent name="D:\教程\源代码\study-part2-part3\1. 基础-HTML-JS-CSS-ES6\第4章\class" />
       <recent name="D:\教程\源代码\study-part2-part3\1. 基础-HTML-JS-CSS-ES6\第4章" />
-      <recent name="D:\教程\源代码\study-part2-part3\1. 基础-HTML-JS-CSS-ES6\第3章" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\教程\源代码\study-part2-part3\2. 进阶-VUE基础、数据绑定、组件化\第1章" />
-      <recent name="D:\教程\源代码\study-part2-part3\1. 基础-HTML-JS-CSS-ES6\第5章" />
-      <recent name="D:\教程\源代码\study-part2-part3\1. 基础-HTML-JS-CSS-ES6\第5章\class" />
     </key>
   </component>
   <component name="ServiceViewManager">
@@ -144,7 +131,9 @@
       <workItem from="1580357351952" duration="24492000" />
       <workItem from="1580460114239" duration="8315000" />
       <workItem from="1580530570335" duration="18723000" />
-      <workItem from="1580631026188" duration="10620000" />
+      <workItem from="1580631026188" duration="11249000" />
+      <workItem from="1580656707830" duration="3598000" />
+      <workItem from="1580696831669" duration="14848000" />
     </task>
     <task id="LOCAL-00001" summary="组件化示例">
       <created>1578376794459</created>
@@ -230,7 +219,28 @@
       <option name="project" value="LOCAL" />
       <updated>1580649638608</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="更新">
+      <created>1580650003270</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1580650003270</updated>
+    </task>
+    <task id="LOCAL-00014" summary="计算属性">
+      <created>1580659979913</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1580659979913</updated>
+    </task>
+    <task id="LOCAL-00015" summary="axios相关">
+      <created>1580712009931</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1580712009931</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -246,7 +256,10 @@
     <MESSAGE value="VUE数据绑定-书本和源代码一一对应" />
     <MESSAGE value="事件绑定" />
     <MESSAGE value="事件监听、表单输入绑定" />
-    <option name="LAST_COMMIT_MESSAGE" value="事件监听、表单输入绑定" />
+    <MESSAGE value="更新" />
+    <MESSAGE value="计算属性" />
+    <MESSAGE value="axios相关" />
+    <option name="LAST_COMMIT_MESSAGE" value="axios相关" />
   </component>
   <component name="WindowStateProjectService">
     <state x="432" y="165" key="#Inspections" timestamp="1579946447294">
@@ -261,10 +274,10 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="531" y="406" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1680.1010@0.0.1680.1010" timestamp="1580534028076" />
-    <state x="648" y="103" key="CommitChangelistDialog2" timestamp="1580649636958">
+    <state x="648" y="103" key="CommitChangelistDialog2" timestamp="1580743711954">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state x="648" y="103" key="CommitChangelistDialog2/0.0.1680.1010@0.0.1680.1010" timestamp="1580649636958" />
+    <state x="648" y="103" key="CommitChangelistDialog2/0.0.1680.1010@0.0.1680.1010" timestamp="1580743711954" />
     <state x="92" y="92" width="1496" height="826" key="DiffContextDialog" timestamp="1578376513093">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
@@ -281,10 +294,10 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="344" y="230" key="SettingsEditor/0.0.1680.1010@0.0.1680.1010" timestamp="1580534276905" />
-    <state x="432" y="240" key="Vcs.Push.Dialog.v2" timestamp="1580649649892">
+    <state x="432" y="240" key="Vcs.Push.Dialog.v2" timestamp="1580712017627">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state x="432" y="240" key="Vcs.Push.Dialog.v2/0.0.1680.1010@0.0.1680.1010" timestamp="1580649649892" />
+    <state x="432" y="240" key="Vcs.Push.Dialog.v2/0.0.1680.1010@0.0.1680.1010" timestamp="1580712017627" />
     <state x="532" y="331" key="com.intellij.ide.util.TipDialog" timestamp="1580357354017">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>

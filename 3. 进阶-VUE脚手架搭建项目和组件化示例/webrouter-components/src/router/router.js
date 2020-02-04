@@ -1,6 +1,7 @@
 import  Vue from 'vue';
 import Router from 'vue-router';
 
+//const HelloCpn = ()=>import("../components/HelloWorld");
 const HelloCpn = ()=>import("../components/HelloWorld");
 const News     = ()=>import('../components/news/News');
 const NewsInternational= ()=>import('../components/news/NewsInternational');

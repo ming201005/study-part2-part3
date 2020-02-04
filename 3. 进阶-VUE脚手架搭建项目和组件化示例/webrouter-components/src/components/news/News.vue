@@ -33,6 +33,8 @@
             // 导航离开该组件的对应路由时调用
             // 可以访问组件实例 `this`
             this.path = from.fullPath;
+            // eslint-disable-next-line no-console
+            console.log("test....");
             window.console.log('beforeRouteLeave path==>',this.path);
             next();
         }

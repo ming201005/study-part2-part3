@@ -1,17 +1,17 @@
 <template>
     <div>
-        <h3>MyCpn</h3>
-        <div>{{this.$route.query.id}}</div>
-        <div class="content">MyCpn的内容</div>
+        <h3>MyCpn-02</h3>
+         <div class="content">
+             <h4>接收到参数：</h4>
+             <div>user = {{$route.params.user}}</div>
+             <div> type = {{$route.params.type}}</div>
+         </div>
     </div>
 </template>
 
 <script>
     export default {
-        name: "MyCpn",
-        props: {
-            id :Number
-        },
+        name: "MyCpn-02",
         data(){
             return{
 

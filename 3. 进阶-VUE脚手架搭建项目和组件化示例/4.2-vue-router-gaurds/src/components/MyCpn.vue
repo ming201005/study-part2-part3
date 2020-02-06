@@ -1,7 +1,7 @@
 <template>
     <div>
         <h3>MyCpn</h3>
-        <div>{{this.$route.query.id}}</div>
+        <div>id===>{{this.$route.query.id}}</div>
         <div class="content">MyCpn的内容</div>
     </div>
 </template>
@@ -9,9 +9,6 @@
 <script>
     export default {
         name: "MyCpn",
-        props: {
-            id :Number
-        },
         data(){
             return{
 

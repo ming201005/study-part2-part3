@@ -1,5 +1,13 @@
 import  Vue from 'vue';
 import Router from 'vue-router';
+Vue.use(Router);
+
+// 解决重复点击导航路由报错
+const newPush = Router.prototype.push;
+Router.prototype.push = function push(location) {
+    return newPush.call(this, location).catch(err => err);
+}
+
 //引入的vue组件
 const Hello = ()=>import("../components/HelloWorld");
 const MyCpn     = ()=>import("../components/MyCpn");
@@ -7,13 +15,6 @@ const Param108 =()=>import("../components/10.8.Params");
 const Param109 =()=>import("../components/10.9.Params");
 const Param1010=()=>import("../components/10.10.Params");
 const Param1012=()=>import("../components/10.12.Params");
-// 解决重复点击导航路由报错
-const newPush = Router.prototype.push;
-Router.prototype.push = function push(location) {
-    return newPush.call(this, location).catch(err => err);
-}
-Vue.use(Router);
-
 //路由配置
 const routes = [
     {

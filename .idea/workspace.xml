@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a18dbc87-d1d9-428e-bea8-4599335912ec" name="Default Changelist" comment="" />
+    <list default="true" id="a18dbc87-d1d9-428e-bea8-4599335912ec" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/3. 进阶-VUE脚手架搭建项目和组件化示例/4.2-vue-router-gaurds/src/components/MyCpn-02.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/3. 进阶-VUE脚手架搭建项目和组件化示例/4.2-vue-router-gaurds/src/components/MyCpn-03.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/3. 进阶-VUE脚手架搭建项目和组件化示例/4.2-vue-router-gaurds/src/components/MyCpn.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/3. 进阶-VUE脚手架搭建项目和组件化示例/4.1-vue-router-params/src/components/MyCpn.vue" beforeDir="false" afterPath="$PROJECT_DIR$/3. 进阶-VUE脚手架搭建项目和组件化示例/4.1-vue-router-params/src/components/MyCpn.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/3. 进阶-VUE脚手架搭建项目和组件化示例/4.1-vue-router-params/src/router/Router.js" beforeDir="false" afterPath="$PROJECT_DIR$/3. 进阶-VUE脚手架搭建项目和组件化示例/4.1-vue-router-params/src/router/Router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/3. 进阶-VUE脚手架搭建项目和组件化示例/4.2-vue-router-gaurds/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/3. 进阶-VUE脚手架搭建项目和组件化示例/4.2-vue-router-gaurds/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/3. 进阶-VUE脚手架搭建项目和组件化示例/4.2-vue-router-gaurds/src/router/Router.js" beforeDir="false" afterPath="$PROJECT_DIR$/3. 进阶-VUE脚手架搭建项目和组件化示例/4.2-vue-router-gaurds/src/router/Router.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,8 +22,8 @@
         <option value="TypeScript File" />
         <option value="HTML File" />
         <option value="HTML VUE" />
-        <option value="JavaScript File" />
         <option value="Vue Single File Component" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -44,31 +53,34 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/3. 进阶-VUE脚手架搭建项目和组件化示例/4.1-vue-router-params/src/components" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/3. 进阶-VUE脚手架搭建项目和组件化示例/4.2-vue-router-gaurds/src/components" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
-    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\IntelliJ IDEA 2019.3.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.completion" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.3.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\教程\源代码\study-part2-part3\3. 进阶-VUE脚手架搭建项目和组件化示例\4.1-vue-router-params\src\components" />
-      <recent name="D:\教程\源代码\study-part2-part3\3. 进阶-VUE脚手架搭建项目和组件化示例\4.1-vue-router-params\src" />
-      <recent name="D:\教程\源代码\study-part2-part3\3. 进阶-VUE脚手架搭建项目和组件化示例\3.1-vue-router\src\components" />
-      <recent name="D:\教程\源代码\study-part2-part3\2. 进阶-VUE基础、数据绑定、组件化\第2章" />
-      <recent name="D:\教程\源代码\study-part2-part3\2. 进阶-VUE基础、数据绑定、组件化\第1章" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\教程\源代码\study-part2-part3\3. 进阶-VUE脚手架搭建项目和组件化示例\4.1-vue-router-params\src\components" />
       <recent name="D:\教程\源代码\study-part2-part3\2. 进阶-VUE基础、数据绑定、组件化\第3章" />
       <recent name="D:\教程\源代码\study-part2-part3\2. 进阶-VUE基础、数据绑定、组件化\js" />
       <recent name="D:\教程\源代码\study-part2-part3\2. 进阶-VUE基础、数据绑定、组件化\第2章\axios" />
       <recent name="D:\教程\源代码\study-part2-part3\2. 进阶-VUE基础、数据绑定、组件化\第1章" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\教程\源代码\study-part2-part3\3. 进阶-VUE脚手架搭建项目和组件化示例\4.2-vue-router-gaurds\src\components" />
+      <recent name="D:\教程\源代码\study-part2-part3\3. 进阶-VUE脚手架搭建项目和组件化示例\4.1-vue-router-params\src\components" />
+      <recent name="D:\教程\源代码\study-part2-part3\3. 进阶-VUE脚手架搭建项目和组件化示例\4.1-vue-router-params\src" />
+      <recent name="D:\教程\源代码\study-part2-part3\3. 进阶-VUE脚手架搭建项目和组件化示例\3.1-vue-router\src\components" />
+      <recent name="D:\教程\源代码\study-part2-part3\2. 进阶-VUE基础、数据绑定、组件化\第2章" />
     </key>
   </component>
   <component name="RunManager">
@@ -133,7 +145,7 @@
       <workItem from="1580828674811" duration="903000" />
       <workItem from="1580873444623" duration="3173000" />
       <workItem from="1580902257942" duration="14000" />
-      <workItem from="1580998137366" duration="506000" />
+      <workItem from="1580998137366" duration="8891000" />
     </task>
     <task id="LOCAL-00001" summary="组件化示例">
       <created>1578376794459</created>
@@ -268,7 +280,21 @@
       <option name="project" value="LOCAL" />
       <updated>1580998640327</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary=" 路由守卫">
+      <created>1580998877383</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1580998877383</updated>
+    </task>
+    <task id="LOCAL-00021" summary=" 路由守卫">
+      <created>1581000454787</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1581000454787</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -297,6 +323,10 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="614" y="214" key="#Custom_Plugin_Repositories/0.0.1680.1010@0.0.1680.1010" timestamp="1580808720079" />
+    <state x="432" y="165" key="#ESLint" timestamp="1581001970469">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="432" y="165" key="#ESLint/0.0.1680.1010@0.0.1680.1010" timestamp="1581001970469" />
     <state x="515" y="121" key="#HTTP_Proxy" timestamp="1580747676691">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
@@ -321,10 +351,10 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="565" y="324" key="#com.intellij.ide.macro.MacrosDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1580873731572" />
-    <state x="400" y="103" key="CommitChangelistDialog2" timestamp="1580998636049">
+    <state x="400" y="103" key="CommitChangelistDialog2" timestamp="1581000451949">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state x="400" y="103" key="CommitChangelistDialog2/0.0.1680.1010@0.0.1680.1010" timestamp="1580998636049" />
+    <state x="400" y="103" key="CommitChangelistDialog2/0.0.1680.1010@0.0.1680.1010" timestamp="1581000451949" />
     <state x="92" y="92" width="1496" height="826" key="DiffContextDialog" timestamp="1578376513093">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
@@ -357,14 +387,14 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state width="1658" height="288" key="GridCell.Tab.0.right/0.0.1680.1010@0.0.1680.1010" timestamp="1580916650520" />
-    <state x="647" y="116" key="SettingsEditor" timestamp="1580812117819">
+    <state x="647" y="116" key="SettingsEditor" timestamp="1580999433545">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state x="647" y="116" key="SettingsEditor/0.0.1680.1010@0.0.1680.1010" timestamp="1580812117819" />
-    <state x="432" y="240" key="Vcs.Push.Dialog.v2" timestamp="1580998668377">
+    <state x="647" y="116" key="SettingsEditor/0.0.1680.1010@0.0.1680.1010" timestamp="1580999433545" />
+    <state x="432" y="240" key="Vcs.Push.Dialog.v2" timestamp="1581000460640">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state x="432" y="240" key="Vcs.Push.Dialog.v2/0.0.1680.1010@0.0.1680.1010" timestamp="1580998668377" />
+    <state x="432" y="240" key="Vcs.Push.Dialog.v2/0.0.1680.1010@0.0.1680.1010" timestamp="1581000460640" />
     <state x="532" y="331" key="com.intellij.ide.util.TipDialog" timestamp="1580357354017">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>

@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a18dbc87-d1d9-428e-bea8-4599335912ec" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/3. 进阶-VUE脚手架搭建项目和组件化示例/4.1-vue-router-params/node_modules/.cache/babel-loader/38263e862e0e00791ba68bdd1947a2ee.json" beforeDir="false" afterPath="$PROJECT_DIR$/3. 进阶-VUE脚手架搭建项目和组件化示例/4.1-vue-router-params/node_modules/.cache/babel-loader/38263e862e0e00791ba68bdd1947a2ee.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/3. 进阶-VUE脚手架搭建项目和组件化示例/4.1-vue-router-params/node_modules/.cache/babel-loader/833260d4235d4195e5aafb4080c05fcc.json" beforeDir="false" afterPath="$PROJECT_DIR$/3. 进阶-VUE脚手架搭建项目和组件化示例/4.1-vue-router-params/node_modules/.cache/babel-loader/833260d4235d4195e5aafb4080c05fcc.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/3. 进阶-VUE脚手架搭建项目和组件化示例/4.1-vue-router-params/node_modules/.cache/vue-loader/177a6b16b6733dead715e4a8cf69910c.json" beforeDir="false" afterPath="$PROJECT_DIR$/3. 进阶-VUE脚手架搭建项目和组件化示例/4.1-vue-router-params/node_modules/.cache/vue-loader/177a6b16b6733dead715e4a8cf69910c.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/3. 进阶-VUE脚手架搭建项目和组件化示例/4.1-vue-router-params/node_modules/.cache/vue-loader/415460b068ffc772593380dfd0f83ebe.json" beforeDir="false" afterPath="$PROJECT_DIR$/3. 进阶-VUE脚手架搭建项目和组件化示例/4.1-vue-router-params/node_modules/.cache/vue-loader/415460b068ffc772593380dfd0f83ebe.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/3. 进阶-VUE脚手架搭建项目和组件化示例/4.1-vue-router-params/node_modules/.cache/vue-loader/63e147f324b548e66fd338cae17610cf.json" beforeDir="false" afterPath="$PROJECT_DIR$/3. 进阶-VUE脚手架搭建项目和组件化示例/4.1-vue-router-params/node_modules/.cache/vue-loader/63e147f324b548e66fd338cae17610cf.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/3. 进阶-VUE脚手架搭建项目和组件化示例/4.1-vue-router-params/node_modules/.cache/vue-loader/84e7ff2431a0bde086bb49e06e1c54ad.json" beforeDir="false" afterPath="$PROJECT_DIR$/3. 进阶-VUE脚手架搭建项目和组件化示例/4.1-vue-router-params/node_modules/.cache/vue-loader/84e7ff2431a0bde086bb49e06e1c54ad.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/3. 进阶-VUE脚手架搭建项目和组件化示例/4.1-vue-router-params/node_modules/.cache/vue-loader/a101489b547a2ff6632ee653bc6569f4.json" beforeDir="false" afterPath="$PROJECT_DIR$/3. 进阶-VUE脚手架搭建项目和组件化示例/4.1-vue-router-params/node_modules/.cache/vue-loader/a101489b547a2ff6632ee653bc6569f4.json" afterDir="false" />
-    </list>
+    <list default="true" id="a18dbc87-d1d9-428e-bea8-4599335912ec" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -142,7 +133,7 @@
       <workItem from="1580828674811" duration="903000" />
       <workItem from="1580873444623" duration="3173000" />
       <workItem from="1580902257942" duration="14000" />
-      <workItem from="1580998137366" duration="246000" />
+      <workItem from="1580998137366" duration="506000" />
     </task>
     <task id="LOCAL-00001" summary="组件化示例">
       <created>1578376794459</created>
@@ -270,7 +261,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580828918266</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary=" 路由守卫">
+      <created>1580998640327</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1580998640327</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -291,7 +289,8 @@
     <MESSAGE value="axios相关" />
     <MESSAGE value="组件化开发" />
     <MESSAGE value="路由、路由传递参数" />
-    <option name="LAST_COMMIT_MESSAGE" value="路由、路由传递参数" />
+    <MESSAGE value=" 路由守卫" />
+    <option name="LAST_COMMIT_MESSAGE" value=" 路由守卫" />
   </component>
   <component name="WindowStateProjectService">
     <state x="614" y="214" key="#Custom_Plugin_Repositories" timestamp="1580808720079">
@@ -322,10 +321,10 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="565" y="324" key="#com.intellij.ide.macro.MacrosDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1580873731572" />
-    <state x="400" y="103" key="CommitChangelistDialog2" timestamp="1580828831687">
+    <state x="400" y="103" key="CommitChangelistDialog2" timestamp="1580998636049">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state x="400" y="103" key="CommitChangelistDialog2/0.0.1680.1010@0.0.1680.1010" timestamp="1580828831687" />
+    <state x="400" y="103" key="CommitChangelistDialog2/0.0.1680.1010@0.0.1680.1010" timestamp="1580998636049" />
     <state x="92" y="92" width="1496" height="826" key="DiffContextDialog" timestamp="1578376513093">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
@@ -362,10 +361,10 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="647" y="116" key="SettingsEditor/0.0.1680.1010@0.0.1680.1010" timestamp="1580812117819" />
-    <state x="432" y="240" key="Vcs.Push.Dialog.v2" timestamp="1580998614576">
+    <state x="432" y="240" key="Vcs.Push.Dialog.v2" timestamp="1580998668377">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state x="432" y="240" key="Vcs.Push.Dialog.v2/0.0.1680.1010@0.0.1680.1010" timestamp="1580998614576" />
+    <state x="432" y="240" key="Vcs.Push.Dialog.v2/0.0.1680.1010@0.0.1680.1010" timestamp="1580998668377" />
     <state x="532" y="331" key="com.intellij.ide.util.TipDialog" timestamp="1580357354017">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>

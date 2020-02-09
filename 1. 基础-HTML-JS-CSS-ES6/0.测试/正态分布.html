@@ -1,0 +1,178 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<canvas id="myCanvas" width="800" height="400" style="border:1px solid #c3c3c3;">
+    Your browser does not support the canvas element.
+</canvas>
+<canvas id="myCanvas2" width="800" height="400" style="border:1px solid #c3c3c3;">
+    Your browser does not support the canvas element.
+</canvas>
+<textarea id="text" cols="200" rows="5000"></textarea>
+<script type="text/javascript">
+
+    var timesArr = [];
+    var timesArrObj = {};
+    window.onload = function () {
+//    for (var meter = 0; meter < 800; meter++) {
+//      var times = getNumberInNormalDistribution(20, 7);
+//      addPoint(times, meter);
+//      timesArr.push(Math.floor(times));
+//    }
+//    drawGreenTab(timesArr,1);
+        // drawLine(0, 380, 800, 380);
+        drawResult(1);
+        drawResult(2);
+        drawResult(0);
+        drawGreenTab(timesArrObj[1], 1);
+        drawGreenTab(timesArrObj[2], 2);
+        drawGreenTab(timesArrObj[0], 0);
+
+    }
+    //制作绿色柱状图表
+    function drawGreenTab(timesArr, color) {
+        var timesTypes = {};
+        for (var i in timesArr) {
+            var times = timesArr[i];
+            if (timesTypes[times] == null) {
+                timesTypes[times] = 0;
+            } else {
+                timesTypes[times] = timesTypes[times] + 1;
+            }
+        }
+        for (var i in timesTypes) {
+            drawRect(i, timesTypes[i], 4, color);
+        }
+    }
+    //画圆点
+    function addPoint(y, x, color) {
+        y = 400 - y;
+        var c = document.getElementById("myCanvas");
+        var cxt = c.getContext("2d");
+        if (color == null) {
+            cxt.fillStyle = "#FF0000";
+        } else {
+            cxt.fillStyle = color;
+        }
+        cxt.beginPath();
+        cxt.arc(x, y, 2, 0, Math.PI * 2, true);
+        cxt.closePath();
+        cxt.fill();
+    }
+    var meter = 0;
+    //划线
+    function drawLine(beginx, beginy, endx, endy) {
+        var c = document.getElementById("myCanvas");
+        var cxt = c.getContext("2d");
+        cxt.moveTo(beginx, beginy);
+        cxt.lineTo(endx, endy);
+        cxt.stroke();
+    }
+    //模拟正态分布取值
+    function getNumberInNormalDistribution(mean, std_dev) {
+        return mean + (uniform2NormalDistribution() * std_dev);
+    }
+    //模拟正态分布偏差
+    function uniform2NormalDistribution() {
+        var sum = 0.0;
+        for (var i = 0; i < 12; i++) {
+            sum = sum + Math.random();
+        }
+        return sum - 6;
+    }
+    //画一个长方形
+    function drawRect(x, y, width, index) {
+        var color = "#FF0000";
+        if (index == 1) {
+            color = "#00FF00";
+        } else if (index == 2) {
+            color = "#0000FF";
+        }
+        var c = document.getElementById("myCanvas2");
+        var cxt = c.getContext("2d");
+        cxt.fillStyle = color;
+        cxt.fillRect(x * width + index * 200, 400 - y, width - 2, y);
+    }
+    //画出生成的图像
+    function drawResult(index) {
+        var color = "#FF0000";
+        if (index % 3 == 1) {
+            color = "#00FF00";
+        } else if (index % 3 == 2) {
+            color = "#0000FF";
+        }
+        var result = generateList();
+        var resultStr = "";
+//    for (var i in result) {
+//      resultStr = resultStr + result[i] + "\n";
+//    }
+        //document.getElementById("text").value = resultStr;
+        var resulttimes = {};
+        for (var i in result) {
+            if (resulttimes[result[i]] == null) {
+                resulttimes[result[i]] = 1;
+            } else {
+                resulttimes[result[i]] = resulttimes[result[i]] + 1;
+            }
+        }
+        for (var i in resulttimes) {
+            resultStr = resultStr + resulttimes[i] + "\n";
+        }
+        document.getElementById("text").value = resultStr;
+        var timeslist = [];
+        var times = 1;
+        for (var i in result) {
+            if (result[i] == index) {
+                addPoint(times, i / 5, color);
+                if (timesArrObj[index] == null) {
+                    timesArrObj[index] = [];
+                }
+                timesArrObj[index].push(times);
+                times = 0;
+            } else {
+                times++;
+            }
+        }
+    }
+    //权重数组
+    var wt = [105, 216, 316, 488, 1000, 2000, 3680, 5890];//,14770,71535
+    //生成结果数组函数，结果为权重数组的索引，从0开始
+    function generateList() {
+        //生成的结果数组长度
+        var n = 50000;
+        var wtp = [];
+        var sum = 0;
+        for (var i in wt) {
+            sum = sum + wt[i];
+        }
+        for (var i in wt) {
+            wtp.push(wt[i] / sum);
+        }
+        var result = [];
+        var p = [];
+        for (var i in wtp) {
+            var inp = getNumberInNormalDistribution(1 / wtp[i], 1 / wtp[i] / 3);
+            p.push(inp);
+        }
+        for (var i = 0; i < n; i++) {
+            var minp = 99999999;
+            var minj = -1;
+            for (var j in p) {
+                if (p[j] < minp) {
+                    minp = p[j];
+                    minj = j;
+                }
+            }
+            result.push(minj);
+            for (var j in p) {
+                p[j] = p[j] - minp;
+            }
+            p[minj] = getNumberInNormalDistribution(1 / wtp[minj], 1 / wtp[minj] / 3);
+        }
+        return result;
+    }
+</script>
+</body>
+</html>
